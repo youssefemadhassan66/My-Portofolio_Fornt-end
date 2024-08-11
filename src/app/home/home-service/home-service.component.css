@@ -1,0 +1,57 @@
+.Home-service-section{
+  color: white;
+  height: 100vh;
+  width: 100%;
+  padding: 2rem 0px;
+  margin: 3rem 0px;
+}
+
+
+.home-services-content-container{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.home-services-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+.home-services-content h1{
+  font-size: 50px;
+}
+.home-services-content p{
+  font-size: 15px;
+
+}
+button {
+  font-size: 23px;
+  padding: 20px 60px;
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 70%;
+
+  &:hover {
+    background-color: #fff;
+    color: #000;
+  }
+}
+.home-services-img {
+  height: 100%
+}
+.home-services-img img{
+  height: 90%;
+  width: 90%;
+
+}
+
+
+
+
+
