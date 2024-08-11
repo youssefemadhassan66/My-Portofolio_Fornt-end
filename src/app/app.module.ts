@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -14,7 +14,6 @@ import { HomeServiceComponent } from './home/home-service/home-service.component
 import { HomeAboutComponent } from './home/home-about/home-about.component';
 import { HomeCardsComponent } from './home/home-cards/home-cards.component';
 import { BriefComponent } from './home/brief/brief.component';
-import { HomeGallaryComponent } from './home/home-gallary/home-gallary.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +29,7 @@ import { HomeGallaryComponent } from './home/home-gallary/home-gallary.component
     HomeAboutComponent,
     HomeCardsComponent,
     BriefComponent,
-    HomeGallaryComponent,
+
 
   ],
   imports: [

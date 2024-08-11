@@ -1,5 +1,5 @@
 import Typed from 'typed.js';
-
+    /// For image scrolling
   export function handleScroll(): void {
     const scrollPosition = window.pageYOffset;
     const image = document.querySelector('.scrolling-image') as HTMLElement;
@@ -9,15 +9,11 @@ import Typed from 'typed.js';
       image.style.transform = `translate(-50%, calc(-50% - ${moveUp}px))`;
     }
   }
-
+  /// Typing
   export function headerTyping(){
     const options = {
       strings: [
-        '<span style="color:#05EEFF;">Cyber Security </span>',
-        '<span style="color:#05EEFF;">Developing </span>',
-        '<span style="color:#05EEFF;">Networking</span>',
-        '<span style="color:#05EEFF;">DevOps</span>',
-        '<span style="color:#05EEFF;">Daily Driver</span>'
+
       ],
       typeSpeed: 120,
       backSpeed: 120,
@@ -28,4 +24,37 @@ import Typed from 'typed.js';
     const typed = new Typed('.auto-type', options);
   }
 
-  
+
+  // src/app/utils/swiper-utils.ts
+
+
+  //swiper
+export const defaultSwiperOptions = {
+  slidesPerView: 1,
+  spaceBetween: 10,
+  loop: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  // Remove or comment out the navigation options
+  // navigation: {
+  //   nextEl: '.swiper-button-next',
+  //   prevEl: '.swiper-button-prev',
+  // },
+  breakpoints: {
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 40,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 50,
+    },
+  },
+};
+
