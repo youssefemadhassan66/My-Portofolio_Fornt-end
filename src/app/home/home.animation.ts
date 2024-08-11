@@ -25,10 +25,12 @@ import Typed from 'typed.js';
   }
 
 
-  // src/app/utils/swiper-utils.ts
+  import Swiper from 'swiper';
 
+  export function initializeSwiper(selector: string, options: any) {
+    return new Swiper(selector, options);
+  }
 
-  //swiper
 export const defaultSwiperOptions = {
   slidesPerView: 1,
   spaceBetween: 10,
@@ -57,4 +59,3 @@ export const defaultSwiperOptions = {
     },
   },
 };
-

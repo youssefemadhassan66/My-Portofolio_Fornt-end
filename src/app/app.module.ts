@@ -14,6 +14,7 @@ import { HomeServiceComponent } from './home/home-service/home-service.component
 import { HomeAboutComponent } from './home/home-about/home-about.component';
 import { HomeCardsComponent } from './home/home-cards/home-cards.component';
 import { BriefComponent } from './home/brief/brief.component';
+import { BlogPostComponent } from './home/blog-post/blog-post.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { BriefComponent } from './home/brief/brief.component';
     HomeAboutComponent,
     HomeCardsComponent,
     BriefComponent,
+    BlogPostComponent,
 
 
   ],
