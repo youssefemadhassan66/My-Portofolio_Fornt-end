@@ -6,11 +6,11 @@ import { Component } from '@angular/core';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
-
+  brand_logo = '/assets/icons/logo.svg';
   navLinks = [
     {path:"/home",label:"Home"},
     {path:"/about",label:"About"},
     {path:"/contact",label:"Contact me"},
-    {path:"/Showcases",label:"Show Cases"}
+    {path:"/showcases",label:"showcases"}
   ]
 }

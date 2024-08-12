@@ -10,14 +10,14 @@ import Typed from 'typed.js';
     }
   }
 
-  
+
   export function headerTyping() :void{
     const options = {
       strings: [
         '<span style="color:#fff;">Squarespace Developer and  Coffee Enthusiast. </span>',
       ],
-      typeSpeed: 150,
-      backSpeed: 120,
+      typeSpeed: 85,
+      backSpeed: 85,
       loop: true
     };
 

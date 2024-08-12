@@ -1,0 +1,19 @@
+<div class="footer-disc-containr">
+  <div class="row">
+    <div class="col-md-4 footer-disc">
+      <a id="email-disc" href="">{{email}}</a>
+      <a id="number-dic" href="">{{number}}</a>
+    </div>
+    <div class="col-md-4 footer-brand">
+        <a href=""><img [src]="brand_logo" alt=""></a>
+    </div>
+    <div class="col-md-4 social-links">
+      <ul class="social-links-list">
+        <li *ngFor="let link of links">
+          <a  [href]="link.link" target="_blank"> <i id="icon" [class]="link.icon"></i></a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>
