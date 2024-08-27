@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class DashBoardComponent {
 
+  navLinks = [
+    {path:"/homeDashboard",label:"Home Dashboard"},
+    {path:"/aboutDashboard",label:"About Dashboard"},
+
+  ]
 }

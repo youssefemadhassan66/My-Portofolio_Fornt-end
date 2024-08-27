@@ -1,1 +1,10 @@
-<p>about works!</p>
+<app-header></app-header>
+  <div class="home-container">
+    <div *ngIf="AboutIntroductionSection">
+    <app-about-introduction [AboutIntroductionFromParent]="AboutIntroductionSection"></app-about-introduction>
+  </div>
+  <app-aboutprofessional-background></app-aboutprofessional-background>
+  <app-about-projects></app-about-projects>
+  <app-about-goals></app-about-goals>
+</div>
+<app-footer></app-footer>

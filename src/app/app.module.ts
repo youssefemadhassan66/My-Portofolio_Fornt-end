@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { provideHttpClient } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -17,6 +19,15 @@ import { FooterDiscreptionComponent } from './footer/footer-discreption/footer-d
 import { FooterCopyrightComponent } from './footer/footer-copyright/footer-copyright.component';
 import { DashBoardComponent } from './dash-board/dash-board.component';
 import { ShowCasesComponent } from './show-cases/show-cases.component';
+import { LoginFormComponent } from './login-form/login-form.component';
+import { HomeDashboardComponent } from './dash-board/home-dashboard/home-dashboard.component';
+import { AboutDashboardComponent } from './dash-board/about-dashboard/about-dashboard.component';
+import { NavDashboardComponent } from './dash-board/nav-dashboard/nav-dashboard.component';
+import { AboutIntroductionComponent } from './about/about-introduction/about-introduction.component';
+import { AboutprofessionalBackgroundComponent } from './about/aboutprofessional-background/aboutprofessional-background.component';
+import { AboutProjectsComponent } from './about/about-projects/about-projects.component';
+import { AboutGoalsComponent } from './about/about-goals/about-goals.component';
+
 
 
 @NgModule({
@@ -37,12 +48,25 @@ import { ShowCasesComponent } from './show-cases/show-cases.component';
     FooterCopyrightComponent,
     DashBoardComponent,
     ShowCasesComponent,
+    LoginFormComponent,
+    HomeDashboardComponent,
+    AboutDashboardComponent,
+    NavDashboardComponent,
+    AboutIntroductionComponent,
+    AboutprofessionalBackgroundComponent,
+    AboutProjectsComponent,
+    AboutGoalsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    provideClientHydration(),
+    provideHttpClient()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

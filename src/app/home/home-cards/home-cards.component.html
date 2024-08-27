@@ -1,14 +1,14 @@
 <div class="home-cards-section d-flex flex-column gap-5">
-  <h1 style="text-align: center; font-size: 70px;">Everything we offer </h1>
+  <h1 style="text-align: center; font-size: 70px;">{{HomeCardHeader}}</h1>
   <div class="row w-100 home-card-container gap-3">
-    <div class="Home-card col-4" *ngFor="let card of cards">
+    <div class="Home-card col-4" *ngFor="let card of Cards">
       <div class="card-content">
-        <h1>{{card.title}}</h1>
-        <p>{{card.description}}</p>
+        <h1>{{card.cardTitle}}</h1>
+        <p>{{card.cardDescription}}</p>
       </div>
-      <div class="card-button">
-        <button>{{card.buttonDescription}}</button>
-      </div>
+      <!-- <div class="card-button">
+        <button>learn more</button>
+      </div> -->
     </div>
   </div>
 </div>

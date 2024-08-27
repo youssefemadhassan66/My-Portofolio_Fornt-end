@@ -1,7 +1,23 @@
+<app-header></app-header>
 <div class="home-container">
-  <app-home-service></app-home-service>
-  <app-home-about></app-home-about>
-  <app-home-cards></app-home-cards>
-  <app-brief></app-brief>
-  <app-blog-post></app-blog-post>
+
+  <div *ngIf="HomeServicesSection">
+    <app-home-service [HomeServicesFromParent]="HomeServicesSection"></app-home-service>
+  </div>
+
+
+  <div *ngIf="HomeAboutSection">
+    <app-home-about [HomeAboutFromParent]="HomeAboutSection"></app-home-about>
+  </div>
+  <div *ngIf="HomeCardSection">
+    <app-home-cards [HomeCardsFromParent]="HomeCardSection"></app-home-cards>
+  </div>
+  <div *ngIf="HomeBriefSection">
+    <app-brief [HomeBriefFromParent]="HomeBriefSection"></app-brief>
+  </div>
+  <div *ngIf="HomeBlogSection">
+    <app-blog-post [HomeBlogsFromParent]="HomeBlogSection"></app-blog-post>
+  </div>
+  >
 </div>
+<app-footer></app-footer>

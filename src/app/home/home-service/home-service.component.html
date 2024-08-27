@@ -3,7 +3,7 @@
   <div class="row h-100">
     <div class="col-lg-5 home-services-img">
           <div class="scroll-container" >
-            <img src="/assets/images/astro2.jpg"  alt="Scrolling Image q">
+            <img [src]="image"  alt="Scrolling Image q">
           </div>
         </div>
 
@@ -12,12 +12,14 @@
         <div class="col-lg-6 home-services-content-container">
           <div class="home-services-content">
               <h1>
-                Being a Squarespace Developer <br>
-                & Designer is my primary focus.
+                {{Header}}
+                <!-- Being a Squarespace Developer <br>
+                & Designer is my primary focus. -->
               </h1>
               <p>
-                Let's be honest and cut through the marketing bullshit, you need a website that <br> looks amazing and actually works.
-                Bottom line,that's what I do. If you want to <br>learn more about working with me, take a look through my website.
+                {{description}}   
+                <!-- Let's be honest and cut through the marketing bullshit, you need a website that <br> looks amazing and actually works.
+                Bottom line,that's what I do. If you want to <br>learn more about working with me, take a look through my website. -->
             </p>
             <button>Our services</button>
           </div>

@@ -1,45 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, Input ,OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-home-cards',
   templateUrl: './home-cards.component.html',
   styleUrl: './home-cards.component.css'
 })
-export class HomeCardsComponent {
+export class HomeCardsComponent implements OnInit{
 
-  cards = [
-    {
-      title: 'Web Developer',
-      description: 'Built by an expert, I provide high-quality Squarespace plugins, snippets, and support that will help take your Squarespace site further.',
-      buttonDescription: 'Join us'
-    },
-    {
-      title: 'Card 1',
-      description: 'This is card 1.',
-      buttonDescription: 'View All Plugins'
-    },
-    {
-      title: 'Card 1',
-      description: 'This is card 1.',
-      buttonDescription: 'View All Plugins'
-    },
-    {
-      title: 'Card 1',
-      description: 'This is card 1.',
-      buttonDescription: 'View All Plugins'
-    },
-    {
-      title: 'Card 1',
-      description: 'This is card 1.',
-      buttonDescription: 'View All Plugins'
-    },
-    {
-      title: 'Card 1',
-      description: 'This is card 1.',
-      buttonDescription: 'View All Plugins'
-    }
+  @Input() HomeCardsFromParent:any;
+  HomeCardHeader:string='';
+  Cards:any[]=[];
 
-  ]
+
+  ngOnInit(): void {
+    this.HomeCardHeader = this.HomeCardsFromParent.Contents[0].data.header
+    this.Cards = this.HomeCardsFromParent.Contents[1].data.Card
+    console.log(this.Cards);
+  }
 
 }
 

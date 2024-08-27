@@ -1,0 +1,14 @@
+<nav class="navbar">
+  <div class="nav-container row " >
+    <div class="col-xl-2 d-flex align-content-center ">
+    </div>
+    <div class="col-xl-8 d-flex justify-content-center ">
+      <ul class="navbar-list d-flex flex-row">
+        <li *ngFor="let NavItem  of navLinks"><a [routerLink]="NavItem.path" routerLinkActive="active"> <h6>{{NavItem.label}} </h6></a></li>
+      </ul>
+    </div>
+    <div class="col-xl-2 d-flex justify-content-end nav-end">
+        <a routerLink="/login"><p>LOGIN</p></a>
+    </div>
+  </div>
+</nav>

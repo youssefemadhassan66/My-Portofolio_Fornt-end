@@ -1,0 +1,97 @@
+<app-nav-dashboard></app-nav-dashboard>
+<div class="body">
+  <div class="form-container">
+    <form (ngSubmit)="onSFormSubmit()" [formGroup]="homeForm">
+
+      <h2>Home form</h2>
+      <!-- Home-About  Input -->
+      <div class="form-group">
+        <label for="text">Home-about Section</label>
+        <label for="text">Home-about Header</label>
+        <input type="text" placeholder="Home About Title"  formControlName="homeAboutTitle" name="homeAboutTitle">
+        <div class="msg" *ngIf="homeForm.get('homeAboutTitle')!.invalid && homeForm.get('homeAboutTitle')!.touched">
+          <div *ngIf="homeForm.get('homeAboutTitle')?.errors?.['required']">
+                *username is required
+          </div>
+            <div *ngIf="homeForm.get('homeAboutTitle')?.errors?.['minlength']">
+            *Minimum length is 6 character
+            </div>
+        </div>
+        <!-- Home  ABOUT - description -->
+        <label for="">Home About description</label>
+        <textarea name="homeAboutDescription" id="homeAboutDescription" formControlName="homeAboutDescription" placeholder="Write Description here"></textarea>
+        <label for="">Home About Image</label>
+        <input id="homeAboutImage" type="file"  (change)="onFileChange($event,'homeAboutImage')">
+
+      </div>
+      <!-- Home services Input -->
+      <div class="form-group">
+        <label for="">Home services Header</label>
+        <input type="text" placeholder="Home About Services" formControlName="homeServicesTitle" name="homeServicesTitle">
+        <div class="msg" *ngIf="homeForm.get('homeServicesTitle')!.invalid && homeForm.get('homeServicesTitle')!.touched">
+          <div *ngIf="homeForm.get('homeServicesTitle')?.errors?.['required']">
+                *Home Services Header is required
+          </div>
+        </div>
+        <!-- Home  service - description -->
+        <label for="">Home services description</label>
+         <textarea name="homeServicesDescription" id="homeServicesDescription" formControlName="homeServicesDescription" placeholder="Write Description here"></textarea>
+          <!-- Home  service - Image -->
+         <label for="">Home Services Image</label>
+          <input id="homeServicesImage" type="file"  (change)="onFileChange($event,'homeServicesImage')">
+      </div>
+
+
+      <!-- Home Cards Input -->
+      <div class="form-group">
+        <label for="">Home Cards Header</label>
+        <input type="text" placeholder="Home Cards Title" formControlName="homeCardsTitle" name="homeCardsTitle">
+        <div class="msg" *ngIf="homeForm.get('homeCardsTitle')!.invalid && homeForm.get('homeCardsTitle')!.touched">
+          <div *ngIf="homeForm.get('homeCardsTitle')?.errors?.['required']">
+                *Home Services Header is required
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group" formArrayName="homeCards">
+        <label for="">Home Cards</label>
+        <div *ngFor="let Card of getCards.controls; let i = index" [formGroupName]="i">
+          <label for="">Card {{i+1}}</label>
+          <input type="text" placeholder="Card Title" formControlName="cardTitle" />
+          <textarea name=""  placeholder="Card Description" formControlName="cardDescription"></textarea>
+        </div>
+         <button type="button" class="btn " (click)="addCard()">Add New Card</button>
+      </div>
+
+      <!-- Home Brief Input -->
+      <div class="form-group">
+        <label for="">Home Brief Header</label>
+        <input type="text" placeholder="Home Brief " formControlName="homeBriefTitle" name="homeBriefTitle">
+        <div class="msg" *ngIf="homeForm.get('homeBriefTitle')!.invalid && homeForm.get('homeBriefTitle')!.touched">
+          <div *ngIf="homeForm.get('homeBriefTitle')?.errors?.['required']">
+                *Home Services Header is required
+          </div>
+        </div>
+        <input id="homeBriefImage" type="file"  (change)="onFileChange($event,'homeBriefImage')">
+      </div>
+
+      <!-- Home Blogs -->
+      <div class="form-group" formArrayName="homeBlogs">
+        <label for=""> Home Blogs</label>
+        <div *ngFor="let blog of getBlogs.controls; let i = index" [formGroupName]="i">
+          <label for="">Blog {{i + 1}}</label>
+          <input type="text" placeholder="Blog Title" formControlName="homeBlogTitle">
+          <textarea  formControlName="homeBlogDescription" placeholder="Blog Description" id="homeBlogDescription"></textarea>
+          <input id="homeBlogImage_{{i}}" type="file" (change)="onFileChange($event, 'homeBlogImage', i)">
+        </div>
+        <button type="button" class="btn" (click)="addBlog()">Add New Blog</button>
+      </div>
+
+
+      <!-- Submit Button -->
+      <div class="form-group text-center">
+        <input type="submit" value="Join Us"/>
+      </div>
+    </form>
+  </div>
+</div>

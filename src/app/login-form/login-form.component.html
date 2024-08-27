@@ -1,0 +1,75 @@
+
+<div class="from-container">
+  <form class="form" autocomplete="off" [formGroup]="loginForm" (ngSubmit)="OnSubmit()">
+    <div class="control">
+      <h1>LOG In</h1>
+    </div>
+    <div class="form-group">
+          <div class="control block-cube block-input">
+            <input name="username" type="text" placeholder="Username" formControlName="username">
+            <div class="bg-top">
+              <div class="bg-inner"></div>
+            </div>
+            <div class="bg-right">
+              <div class="bg-inner"></div>
+            </div>
+            <div class="bg">
+              <div class="bg-inner"></div>
+            </div>
+          </div>
+        <!--userName Validator -->
+          <div class="msg" *ngIf="loginForm.get('username')!.invalid && loginForm.get('username')!.touched">
+            <div *ngIf="loginForm.get('username')?.errors?.['required']">
+              <p>*username is required</p>
+            </div>
+          <div *ngIf="loginForm.get('username')?.errors?.['minlength']">
+              <p>*Minimum length is 6 character</p>
+          </div>
+          <div *ngIf="loginForm.get('username')?.errors?.['maxlength']">
+            <p>Name maximum length is 16</p>
+          </div>
+      </div>
+    </div>
+
+
+    <div class="from-group">
+        <div class="control block-cube block-input">
+          <input name="password" type="password" placeholder="Password" formControlName="password">
+          <div class="bg-top">
+            <div class="bg-inner"></div>
+          </div>
+          <div class="bg-right">
+            <div class="bg-inner"></div>
+          </div>
+          <div class="bg">
+            <div class="bg-inner"></div>
+          </div>
+        </div>
+        <!--Password Validator -->
+        <div class="msg" *ngIf="loginForm.get('password')!.invalid && loginForm.get('password')!.touched">
+
+          <div *ngIf="loginForm.get('password')?.errors?.['required']">
+            <p>*Password is required</p>
+          </div>
+
+          <div *ngIf="loginForm.get('password')?.errors?.['passwordStrength']">
+            <p>*password should be stronger</p>
+          </div>
+      </div>
+  </div>
+
+    <button class="btn block-cube block-cube-hover" type="submit">
+      <div class="bg-top">
+        <div class="bg-inner"></div>
+      </div>
+      <div class="bg-right">
+        <div class="bg-inner"></div>
+      </div>
+      <div class="bg">
+        <div class="bg-inner"></div>
+      </div>
+      <!-- .bg2 -->
+      <div class="text">Log In</div>
+    </button>
+  </form>
+</div>

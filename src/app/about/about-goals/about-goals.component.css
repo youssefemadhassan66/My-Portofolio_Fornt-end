@@ -1,0 +1,52 @@
+.brief{
+  margin: 60px 0px;
+  width: 100%;
+  height: 100vh;
+  background-image: url('../../../../public/assets/images/Default_a_cinematic_photograph_with_a_dramatic_dreamlike_quali_0.jpg');
+  background-size: cover;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.breif-gradiant{
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.822), rgba(1, 1, 1, 0.605));
+}
+.brief-container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center
+
+}
+.brief-container{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.brief-container h1{
+  font-size: 60px;
+  width: 15 00px;
+}
+
+.brief:hover{
+  box-shadow: #000 0px 5px 15px 0px;
+
+}
+
+button {
+  font-size: 20px;
+  padding: 22px 20px;
+  width: 480px;
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: #fff;
+    color: #000;
+  }
+}
