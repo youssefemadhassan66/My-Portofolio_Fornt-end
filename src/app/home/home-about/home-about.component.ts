@@ -1,5 +1,5 @@
 import { Component, Input, OnInit} from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-home-about',
   templateUrl: './home-about.component.html',
@@ -7,7 +7,7 @@ import { Component, Input, OnInit} from '@angular/core';
 })
 export class HomeAboutComponent implements OnInit{
 
-  constructor() { }
+  constructor(private router:Router) { }
   @Input() HomeAboutFromParent :any;
   Header :string ='';
   description : string = '';
@@ -15,9 +15,10 @@ export class HomeAboutComponent implements OnInit{
   ngOnInit(): void {
     this.Header = this.HomeAboutFromParent.Contents[0].data.header;
     this.description = this.HomeAboutFromParent.Contents[0].data.description;
-    this.image = this.HomeAboutFromParent.Contents[0].data.homeAboutImage;
-    console.log('Image Path:', this.image);
-
+    this.image = this.HomeAboutFromParent.Contents[0].data.homeAboutImage.image
+  }
+  onNvigate(){
+    this.router.navigate(['/about']);
   }
 
 

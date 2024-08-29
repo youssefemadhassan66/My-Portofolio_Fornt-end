@@ -7,7 +7,7 @@ a{
   }
   .navbar{
     width: 100%;
-    border-bottom: 1px  #ebdda37c solid;
+    border-bottom: 1px  #ffffff7c solid;
     z-index: 2;
   }
 
@@ -65,4 +65,18 @@ a{
     transform: scaleX(0);
     transform-origin: right;
   }
+button {
+  font-size: 12x;
+  padding: 20px 60px;
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 70%;
 
+  &:hover {
+    background-color: #fff;
+    color: #000;
+  }
+}

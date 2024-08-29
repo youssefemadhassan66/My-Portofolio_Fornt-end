@@ -3,7 +3,7 @@
     <div class="swiper-wrapper h-100">
       <div class="swiper-slide blog-home-card col-lg-4" *ngFor="let blog of Blogs">
         <div class="card">
-          <img [src]="blog.homeBlogImage" alt="Card Image">
+          <img [src]="blog.homeBlogImage.image" alt="Card Image">
           <div class="card-content">
             <h1 class="blog-title">{{ blog.homeBlogTitle }}</h1>
             <p class="blog-disc">{{ blog.homeBlogDescription }}</p>

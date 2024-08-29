@@ -10,6 +10,5 @@ export class HeaderComponent {
   vidPath = '../assets/images/Video.mp4';
   imgPath = '../images/Default_A_cinematic_highcontrast_wideangle_photograph_of_a_maj_2.jpg';
   ngOnInit(): void {
-    headerTyping();
   }
 }

@@ -1,0 +1,58 @@
+<app-nav-dashboard></app-nav-dashboard>
+<div class="body">
+  <div class="form-container">
+    <form (ngSubmit)="onSFormSubmit()" [formGroup]="ShowCasesForm">
+
+      <h2>Services form</h2>
+
+      <div class="form-group">
+        <label for="text">ShowCases Title</label>
+        <input type="text" placeholder="ShowCases header Title"  formControlName="ShowCasesHeaderTitle" name="ShowCasesHeaderTitle">
+        <label for="">Contact Header Image</label>
+        <input id="ShowCasesHeaderImage" type="file"  (change)="onFileChange($event,'ShowCasesHeaderImage')">
+      </div>
+
+      <!-- ShowCases-Introduction -->
+      <div class="form-group">
+
+        <label for="text">ShowCases-Introduction Header</label>
+        <input type="text" placeholder="ShowCases  Title"  formControlName="ShowCasesIntroductionTitle" name="ShowCasesIntroductionTitle">
+        <!-- ShowCasesIntroduction - description -->
+        <label for="">ShowCases Introduction description</label>
+        <textarea name="ShowCasesIntroductionDescription" id="ShowCasesIntroductionDescription" formControlName="ShowCasesIntroductionDescription" placeholder="Write Description here"></textarea>
+        <label for="">ShowCases Introduction Image</label>
+        <input id="ShowCasesIntroductionImage" type="file"  (change)="onFileChange($event,'ShowCasesIntroductionImage')">
+      </div>
+      <!-- ShowCases Contact  -->
+
+      <div class="form-group">
+        <!-- ShowCases Contact header -->
+        <label for="text">ShowCases Contact Title</label>
+        <input type="text" placeholder="ShowCases  Title"  formControlName="ShowCasesContactTitle" name="ShowCasesContactTitle">
+        <!-- ShowCasesIntroduction - description -->
+        <label for="">ShowCases Contact description</label>
+        <textarea name="ShowCasesContactDescription" id="ShowCasesContactDescription" formControlName="ShowCasesContactDescription" placeholder="Write Description here"></textarea>
+        <label for="">ShowCases Introduction Link</label>
+        <input type="text" placeholder="ShowCases  Title"  formControlName="ShowCasesContactLink" name="ShowCasesContactLink">
+      </div>
+
+      <!-- ShowCases sections -->
+      <div class="form-group" formArrayName="ShowCasesSections">
+        <label for=""> ShowCases Sections</label>
+        <div *ngFor="let Section of getSections.controls; let i = index" [formGroupName]="i">
+          <label for="">Section {{i + 1}}</label>
+          <input type="text" placeholder="Blog Title" formControlName="sectionTitle">
+          <textarea  formControlName="sectionDescription" placeholder="section Description" id="sectionImage"></textarea>
+          <input id="sectionImage_{{i}}" type="file" (change)="onFileChange($event, 'sectionImage', i)">
+        </div>
+        <button type="button" class="btn" (click)="addSection()">Add New Blog</button>
+      </div>
+
+
+      <!-- Submit Button -->
+      <div class="form-group">
+        <input type="submit" value="Submit Form"/>
+      </div>
+    </form>
+  </div>
+</div>

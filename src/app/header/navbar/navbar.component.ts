@@ -11,6 +11,6 @@ export class NavbarComponent {
     {path:"/home",label:"Home"},
     {path:"/about",label:"About"},
     {path:"/contact",label:"Contact me"},
-    {path:"/showcases",label:"showcases"}
+    {path:"/showcases",label:"Services"}
   ]
 }

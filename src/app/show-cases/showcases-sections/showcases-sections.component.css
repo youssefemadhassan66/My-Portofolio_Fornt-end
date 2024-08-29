@@ -1,0 +1,73 @@
+/* styles.css */
+
+.sections {
+  padding: 50px 20px;
+  background-color: #000;
+  color: white;
+}
+
+/* Individual Section */
+.section-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 60px;
+  position: relative;
+
+}
+
+.section-number {
+  font-size: 120px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.153);
+  position: absolute;
+  top: 20px;
+  left: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.section-content {
+  max-width: 600px;
+  z-index: 1;
+  position: relative;
+}
+
+.section-content h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.section-content p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.section-item img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  z-index: 1;
+  position: relative;
+}
+
+
+@media (max-width: 768px) {
+  .section-item {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .section-item img {
+      margin-top: 20px;
+  }
+
+  .section-number {
+      font-size: 80px;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+  }
+}

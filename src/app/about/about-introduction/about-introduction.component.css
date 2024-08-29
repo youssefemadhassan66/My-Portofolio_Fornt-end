@@ -1,29 +1,29 @@
-.Home-service-section{
+.about-introduction-section{
   color: white;
-  height: 80vh;
+  height: 100vh;
   width: 100%;
   padding: 2rem 0px;
   margin: 3rem 0px;
 }
 
 
-.home-services-content-container{
+.about-introduction-content-container{
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 
 }
-.home-services-content{
+.about-introduction-content{
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 10px;
 }
-.home-services-content h1{
-  font-size: 50px;
+.about-introduction-content h1{
+  font-size: 60px;
 }
-.home-services-content p{
+.about-introduction-content p{
   font-size: 15px;
 
 }
@@ -46,7 +46,7 @@ button {
   height: 100%
 }
 .home-services-img img{
-  height: 90%;
+  height: 80%;
   width: 90%;
 
 }

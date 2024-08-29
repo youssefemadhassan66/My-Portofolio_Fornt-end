@@ -10,6 +10,8 @@ import { AuthService } from './services/authService/auth.service';
 import { authGuard } from './guards/auth.guard';
 import { HomeDashboardComponent } from './dash-board/home-dashboard/home-dashboard.component';
 import { AboutDashboardComponent } from './dash-board/about-dashboard/about-dashboard.component';
+import { ContactDashboardComponent } from './dash-board/contact-dashboard/contact-dashboard.component';
+import { ShowcasesDashboardComponent } from './dash-board/showcases-dashboard/showcases-dashboard.component';
 const routes: Routes = [
  {path:'',redirectTo:'/home',pathMatch:'full'},
   {path:'home',component:HomeComponent},
@@ -20,8 +22,9 @@ const routes: Routes = [
   {path:'dashboard',component:DashBoardComponent,canActivate:[authGuard]},
   {path:'homeDashboard',component:HomeDashboardComponent,canActivate:[authGuard]},
   {path:'aboutDashboard',component:AboutDashboardComponent,canActivate:[authGuard]},
+  {path:'contactDashboard',component:ContactDashboardComponent,canActivate:[authGuard]},
+  {path:'showCasesDashboard',component:ShowcasesDashboardComponent,canActivate:[authGuard]},
   {path: '**', redirectTo: '/login'}
-
 ];
 
 

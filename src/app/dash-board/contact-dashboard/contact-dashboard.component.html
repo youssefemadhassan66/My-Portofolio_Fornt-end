@@ -1,0 +1,45 @@
+<app-nav-dashboard></app-nav-dashboard>
+<div class="body">
+  <div class="form-container">
+    <form (ngSubmit)="onSFormSubmit()" [formGroup]="ContactForm">
+      <h2>Contact form</h2>
+      <div class="form-group">
+        <label for="text">Contact Title</label>
+        <input type="text" placeholder="Contact header Title"  formControlName="contactHeaderTitle" name="contactHeaderTitle">
+        <label for="">Contact Header Image</label>
+        <input id="contactHeaderImage" type="file"  (change)="onFileChange($event,'contactHeaderImage')">
+      </div>
+
+      <!-- Contact-Introduction -->
+      <div class="form-group">
+        <label for="text">Contact-Introduction Header</label>
+        <input type="text" placeholder="Contact Title"  formControlName="ContactIntroductionTitle" name="ContactIntroductionTitle">
+        <!-- ContactIntroduction - description -->
+        <label for="">Contact Introduction description</label>
+        <textarea name="ContactIntroductionDescription" id="ContactIntroductionDescription" formControlName="ContactIntroductionDescription" placeholder="Write Description here"></textarea>
+        <label for="">Contact Introduction Image</label>
+        <input id="ContactIntroductionImage" type="file"  (change)="onFileChange($event,'ContactIntroductionImage')">
+      </div>
+      <!-- Contact Contact  -->
+
+      <div class="form-group">
+        <!-- Contact Contact header -->
+        <label for="text">Direct Contact Title</label>
+        <input type="text" placeholder="Contact  Direct Title"  formControlName="ContactDirectlyTitle" name="ContactDirectlyTitle">
+        <!-- ContactIntroduction - description -->
+        <label for="">Contact Direct description</label>
+        <textarea name="ContactDescription" id="ContactDescription" formControlName="ContactDescription" placeholder="Write Description here"></textarea>
+        <label for="">Contact Direct  Phone number</label>
+        <input type="text" placeholder="ContactDirectlyMail  Title"  formControlName="ContactDirectlyNumber" name="ContactDirectlyNumber">
+        <label for="">Contact Direct  Mail</label>
+        <input type="text" placeholder="Contacts  Title"  formControlName="ContactDirectlyMail" name="ContactDirectlyMail">
+      </div>
+
+
+      <!-- Submit Button -->
+      <div class="form-group">
+        <input type="submit" value="Submit Form"/>
+      </div>
+    </form>
+  </div>
+</div>

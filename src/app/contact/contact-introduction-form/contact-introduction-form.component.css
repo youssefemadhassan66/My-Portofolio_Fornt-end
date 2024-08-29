@@ -1,0 +1,140 @@
+
+.Contact-container{
+  position: relative;
+  width: 90%;
+  margin: auto;
+  color: white;
+  font-family: 'booni';
+  height: 100vh;
+}
+
+.Contact-introduction{
+  height:   100vh;
+
+}
+
+.Contact-introduction-content{
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.Contact-introduction-content h1{
+  font-size: 90px;
+}
+
+::placeholder {
+  color:#ffffffce;
+  opacity: 0.8; /* Firefox */
+}
+.body {
+  background-color: #000;
+  color: #FFf;
+  margin: 0;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  color: #fff;
+  background-color: #000;
+  padding: 30px;
+  box-shadow: 2 4px 8px rgba(255, 255, 255, 0.1);
+  width: 800px;
+
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: white;
+  font-size: 4rem;
+}
+
+.form-group {
+  margin-bottom: 50px;
+  padding: 20px;
+}
+
+label {
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #fff;
+}
+
+input,
+select,
+textarea {
+  font-size: 3rem;
+  color: white;
+  width: 90%;
+  padding: 25px 15px;
+  border: 1px solid #b8ad8067;
+  box-sizing: border-box;
+  font-size: 16px;
+  transition: border-color 0.3s;
+  border-radius: 5PX;
+  margin-bottom: 20px;
+  background-color: #000;
+}
+textarea {
+  height: 150px;
+
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #FFF;
+  outline: none;
+}
+
+
+button {
+  width: 90%;
+  padding: 22px 15px;
+  background-color: #dfdfdf;
+  border: none;
+  border-radius: 5px;
+  color: #000;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #b8ad8067;
+  color: #fff;
+}
+
+.form-group-inline {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.form-group-inline label {
+  margin-right: 10px;
+  margin-bottom: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+input.ng-invalid.ng-touched
+{
+  border: 2px solid red;
+}
+
+.msg{
+  font-size: x-small;
+  color: red;
+}

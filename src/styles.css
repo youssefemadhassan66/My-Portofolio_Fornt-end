@@ -1,4 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 body{
-  background-color: rgb(3, 3, 3) !important;
+  background-color: rgb(0, 0, 0) !important;
+}
+@font-face {
+  font-family: 'booni';
+  src: url('/assets/fonts/booni/bodoni_Serif.ttf') ;
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'booniItalic';
+  src: url('/assets/fonts/booni/LibreBodoni-Italic.ttf') ;
+  font-weight: normal;
+  font-style: normal;
 }

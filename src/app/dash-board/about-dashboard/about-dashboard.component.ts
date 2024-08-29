@@ -11,6 +11,8 @@ export class AboutDashboardComponent implements OnInit{
   constructor(private AboutDataService:HomeDataService){}
   ngOnInit(){
     this.aboutForm = new FormGroup({
+      AboutHeaderTitle : new FormControl(null),
+      AboutHeaderImage : new FormControl(null),
       AboutIntroductionTitle : new FormControl('',[Validators.required,Validators.minLength(2)]),
       AboutIntroductionDescription : new FormControl('',[Validators.required,Validators.minLength(2)]),
       AboutIntroductionImage : new FormControl(null),
@@ -55,6 +57,19 @@ export class AboutDashboardComponent implements OnInit{
     const requestData = {
       sections: [
         {
+          title: 'About-Header-section',
+          Contents: [
+            {
+              title: 'aboutHeader',
+              type: 'header_paragraph',
+              data: {
+                header: this.aboutForm.get('AboutHeaderTitle')?.value,
+                AboutHeaderImage:''
+              }
+            }
+          ]
+        },
+        {
           // About Introduction
           title: 'About-Introduction-section',
           Contents: [
@@ -64,7 +79,7 @@ export class AboutDashboardComponent implements OnInit{
               data: {
                 header: this.aboutForm.get('AboutIntroductionTitle')?.value,
                 description: this.aboutForm.get('AboutIntroductionDescription')?.value,
-                homeAboutImage: ''
+                AboutIntroductionImage: ''
               }
             }
           ]
@@ -124,7 +139,12 @@ export class AboutDashboardComponent implements OnInit{
     // Convert `requestData` to JSON and append to FormData
     AboutFormData.append('requestData', JSON.stringify(requestData));
 
-    // Append files to FormData, if they exist
+    const AboutHeaderImage = this.aboutForm.get('AboutHeaderImage')?.value;
+    AboutFormData.append('AboutHeaderImage', AboutHeaderImage);
+
+    const homeHeaderImage = this.aboutForm.get('homeHeaderImage')?.value;
+    AboutFormData.append('homeHeaderImage', homeHeaderImage);
+
     const AboutIntroductionImage = this.aboutForm.get('AboutIntroductionImage')?.value;
     if (AboutIntroductionImage) {
       AboutFormData.append('AboutIntroductionImage', AboutIntroductionImage);

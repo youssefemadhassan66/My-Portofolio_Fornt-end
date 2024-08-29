@@ -1,0 +1,12 @@
+<section class="sections">
+  <div section-item *ngFor="let section of Sections;let i = index">
+    <div class="section-number">0{{i+1}}</div>
+      <div class="section-content">
+          <h2>{{section.sectionTitle}}</h2>
+          <p>
+            {{section.sectionDescription}}
+            </p>
+      </div>
+      <img [src]="section.sectionImage.image" alt="Card Image">
+    </div>
+</section>

@@ -10,6 +10,8 @@ export class DashBoardComponent {
   navLinks = [
     {path:"/homeDashboard",label:"Home Dashboard"},
     {path:"/aboutDashboard",label:"About Dashboard"},
+    {path:"/contactDashboard",label:"Contact Dashboard"},
+    {path:"/showCasesDashboard",label:"Show Cases Dashboard"},
 
   ]
 }

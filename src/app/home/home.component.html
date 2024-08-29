@@ -1,11 +1,12 @@
-<app-header></app-header>
-<div class="home-container">
 
+<div *ngIf="HomeHeaderSection">
+  <app-home-header [HomeHeaderFromParent]="HomeHeaderSection"></app-home-header>
+</div>
+
+<div class="home-container">
   <div *ngIf="HomeServicesSection">
     <app-home-service [HomeServicesFromParent]="HomeServicesSection"></app-home-service>
   </div>
-
-
   <div *ngIf="HomeAboutSection">
     <app-home-about [HomeAboutFromParent]="HomeAboutSection"></app-home-about>
   </div>

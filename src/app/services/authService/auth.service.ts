@@ -10,6 +10,7 @@ import { FormControl } from '@angular/forms';
 export class AuthService {
 
 LoginUrl = 'http://localhost:3000/login';
+
 private isLocalStorageAvailable = typeof localStorage !=='undefined';
 constructor(private http:HttpClient,private router:Router) {
     if(this.isLocalStorageAvailable){
@@ -26,6 +27,19 @@ constructor(private http:HttpClient,private router:Router) {
 
 private tokenSubject : BehaviorSubject <string | null> = new BehaviorSubject<string | null>(null);
 
+// isTokenExpired(token: string): boolean {
+//   try {
+//     const decodedToken: any = jwtDecode(token);
+//     const expiry = decodedToken.exp * 1000;
+//     return Date.now() >= expiry;
+//   } catch (error) {
+//     return true;
+//   }
+// }
+
+
+
+
 login(username: FormControl, password: FormControl): Observable<any> {
   return this.http.post<any>(this.LoginUrl,{
     "username": username,
@@ -38,6 +52,7 @@ login(username: FormControl, password: FormControl): Observable<any> {
       if (token) {
         localStorage.setItem('accessToken', token);
         this.tokenSubject.next(token);
+        console.log(token);
       } else {
         console.log('No token from the server');
       }
@@ -60,10 +75,10 @@ getDecodedToken():any{
   return null
 }
 
-isAuthenticated():boolean{
-  return this.tokenSubject.value !== null;
+isAuthenticated(): boolean {
+  const token = localStorage.getItem('accessToken');
+  return token !== null;
 }
-
 logOut():void{
   localStorage.removeItem('accessToken');
   this.tokenSubject.next(null);

@@ -27,6 +27,17 @@ import { AboutIntroductionComponent } from './about/about-introduction/about-int
 import { AboutprofessionalBackgroundComponent } from './about/aboutprofessional-background/aboutprofessional-background.component';
 import { AboutProjectsComponent } from './about/about-projects/about-projects.component';
 import { AboutGoalsComponent } from './about/about-goals/about-goals.component';
+import { ContactIntroductionFormComponent } from './contact/contact-introduction-form/contact-introduction-form.component';
+import { ContactDirctlyComponent } from './contact/contact-dirctly/contact-dirctly.component';
+import { ShowcasesIntridcutionComponent } from './show-cases/showcases-intridcution/showcases-intridcution.component';
+import { ShowcasesSectionsComponent } from './show-cases/showcases-sections/showcases-sections.component';
+import { ShowcasesContactComponent } from './show-cases/showcases-contact/showcases-contact.component';
+import { ShowcasesDashboardComponent } from './dash-board/showcases-dashboard/showcases-dashboard.component';
+import { ContactDashboardComponent } from './dash-board/contact-dashboard/contact-dashboard.component';
+import { HomeHeaderComponent } from './home/home-header/home-header.component';
+import { AboutHeaderComponent } from './about/about-header/about-header.component';
+import { ContactHeaderComponent } from './contact/contact-header/contact-header.component';
+import { ShowcasesHeaderComponent } from './show-cases/showcases-header/showcases-header.component';
 
 
 
@@ -55,7 +66,18 @@ import { AboutGoalsComponent } from './about/about-goals/about-goals.component';
     AboutIntroductionComponent,
     AboutprofessionalBackgroundComponent,
     AboutProjectsComponent,
-    AboutGoalsComponent
+    AboutGoalsComponent,
+    ContactIntroductionFormComponent,
+    ContactDirctlyComponent,
+    ShowcasesIntridcutionComponent,
+    ShowcasesSectionsComponent,
+    ShowcasesContactComponent,
+    ShowcasesDashboardComponent,
+    ContactDashboardComponent,
+    HomeHeaderComponent,
+    AboutHeaderComponent,
+    ContactHeaderComponent,
+    ShowcasesHeaderComponent
   ],
   imports: [
     BrowserModule,

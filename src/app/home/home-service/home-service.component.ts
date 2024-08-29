@@ -1,7 +1,7 @@
 import { Component ,Input,OnInit} from '@angular/core';
 import { HostListener } from '@angular/core';
 import { handleScroll } from '../home.animation';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-home-service',
   templateUrl: './home-service.component.html',
@@ -10,7 +10,7 @@ import { handleScroll } from '../home.animation';
 export class HomeServiceComponent implements OnInit {
 
 
-
+  constructor(private router:Router){}
   @Input() HomeServicesFromParent :any;
   Header :string ='';
   description : string = '';
@@ -19,8 +19,12 @@ export class HomeServiceComponent implements OnInit {
   ngOnInit(): void {
     this.Header = this.HomeServicesFromParent.Contents[0].data.header;
     this.description = this.HomeServicesFromParent.Contents[0].data.description;
-    this.image = this.HomeServicesFromParent.Contents[0].data.homeServicesImage;
+    this.image = this.HomeServicesFromParent.Contents[0].data.homeServicesImage.image;
   }
+  onNvigate(){
+    this.router.navigate(['/showcases']);
+  }
+
 
   @HostListener('window:scroll', ['$event'])
     onScroll(event: Event): void {

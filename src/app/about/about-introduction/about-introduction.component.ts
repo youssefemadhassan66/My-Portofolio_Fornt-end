@@ -14,6 +14,6 @@ export class AboutIntroductionComponent implements OnInit{
   ngOnInit(): void {
     this.Header = this.AboutIntroductionFromParent.Contents[0].data.header;
     this.description = this.AboutIntroductionFromParent.Contents[0].data.description;
-    this.image = this.AboutIntroductionFromParent.Contents[0].data.homeAboutImage;
+    this.image = this.AboutIntroductionFromParent.Contents[0].data.AboutIntroductionImage.image;
   }
 }

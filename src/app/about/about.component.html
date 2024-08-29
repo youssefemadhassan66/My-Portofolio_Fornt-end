@@ -1,10 +1,25 @@
-<app-header></app-header>
-  <div class="home-container">
-    <div *ngIf="AboutIntroductionSection">
+<div *ngIf="AboutHeaderSection">
+  <app-about-header [AboutHeaderDataFromParent]="AboutHeaderSection"></app-about-header>
+</div>
+<div class="home-container">
+  <div *ngIf="AboutIntroductionSection">
     <app-about-introduction [AboutIntroductionFromParent]="AboutIntroductionSection"></app-about-introduction>
   </div>
-  <app-aboutprofessional-background></app-aboutprofessional-background>
-  <app-about-projects></app-about-projects>
-  <app-about-goals></app-about-goals>
+
+  <div *ngIf="AboutProfessionalBackgroundSection">
+  </div>
+
+  <div *ngIf="AboutProfessionalBackgroundSection">
+    <app-aboutprofessional-background [AboutProfessionalBackgroundFromParent]="AboutProfessionalBackgroundSection"></app-aboutprofessional-background>
+  </div>
+
+  <div *ngIf="AboutProjectsSection">
+    <app-about-projects [AboutProjectsFromParent]="AboutProjectsSection"></app-about-projects>
+  </div>
+
+  <div *ngIf="AboutGoalsSection">
+    <app-about-goals [AboutGoalsFromParent]="AboutGoalsSection"></app-about-goals>
+  </div>
 </div>
+
 <app-footer></app-footer>

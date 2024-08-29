@@ -1,1 +1,18 @@
-<p>show-cases works!</p>
+<div *ngIf="ShowCasesHeaderSection">
+  <app-showcases-header></app-showcases-header>
+</div>
+<div class="services-container">
+
+  <div *ngIf="ShowCasesIntroductionSection">
+    <app-showcases-intridcution [showCasesIntroductionFromParent]="ShowCasesIntroductionSection"></app-showcases-intridcution>
+  </div>
+
+  <div *ngIf="ShowCasesSectionsOFsection">
+    <app-showcases-sections [showCasesSectionsFromParent]="ShowCasesSectionsOFsection"></app-showcases-sections>
+  </div>
+
+  <div *ngIf="ShowCasesContactSection">
+    <app-showcases-contact [showCasesContactFromParent]="ShowCasesContactSection"></app-showcases-contact>
+  </div>
+</div>
+<app-footer></app-footer>

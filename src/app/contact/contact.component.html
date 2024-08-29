@@ -1,1 +1,12 @@
-<p>contact works!</p>
+<div *ngIf="ContactHeaderSection">
+  <app-contact-header [ContactHeaderSectionFromParent]="ContactHeaderSection"></app-contact-header>
+</div>
+<div class="Contact-container">
+  <div *ngIf="ContactIntroductionSection">
+    <app-contact-introduction-form [ContactIntroductionFormParent]="ContactIntroductionSection"></app-contact-introduction-form>
+  </div>
+  <div *ngIf="ContactDirectSection">
+    <app-contact-dirctly [ContactDirectFormParent]="ContactDirectSection"></app-contact-dirctly>
+  </div>
+</div>
+<app-footer></app-footer>

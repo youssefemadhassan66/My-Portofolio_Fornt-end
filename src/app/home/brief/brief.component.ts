@@ -10,7 +10,7 @@ export class BriefComponent implements OnInit{
   HomeBriefImage:any;
   ngOnInit(): void {
     this.HomeBriefHeader = this.HomeBriefFromParent.Contents[0].data.header;
-    this.HomeBriefImage = this.HomeBriefFromParent.Contents[0].data.homeBriefImage;
+    this.HomeBriefImage = this.HomeBriefFromParent.Contents[0].data.homeBriefImage.image;
   }
 
 }

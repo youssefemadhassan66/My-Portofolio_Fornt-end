@@ -1,57 +1,14 @@
-.Home-service-section{
-  color: white;
-  height: 100vh;
+.BackGround-Container{
   width: 100%;
-  padding: 2rem 0px;
-  margin: 3rem 0px;
-}
-
-
-.home-services-content-container{
-  height: 100%;
-  display: flex;
-  justify-content: center;
+  height: 50vh;
   align-items: center;
-
-}
-.home-services-content{
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 10px;
+  font-family: 'booniItalic';
+  font-weight: 10000;
 }
-.home-services-content h1{
+span{
   font-size: 50px;
 }
-.home-services-content p{
-  font-size: 15px;
-
+h1{
+  font-size: 35px !important;
 }
-button {
-  font-size: 23px;
-  padding: 20px 60px;
-  border: 2px solid #fff;
-  background: transparent;
-  color: #fff;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  width: 70%;
-
-  &:hover {
-    background-color: #fff;
-    color: #000;
-  }
-}
-.home-services-img {
-  height: 100%
-}
-.home-services-img img{
-  height: 90%;
-  width: 90%;
-
-}
-
-
-
-
-

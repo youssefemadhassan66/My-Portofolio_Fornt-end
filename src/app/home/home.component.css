@@ -4,5 +4,12 @@
   width: 90%;
   margin: auto;
   color: white;
-  font-family: monospace, serif !important;
+  font-family: 'booni';
 }
+h1,h2,h3,h4{
+  font-family: 'booni';
+}
+p{
+  font-family: 'Times New Roman', Times, serif;
+}
+

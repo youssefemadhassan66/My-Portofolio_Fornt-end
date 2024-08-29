@@ -14,24 +14,26 @@ export class HomeDashboardComponent implements OnInit{
 
   ngOnInit(){
     this.homeForm = new FormGroup({
-      homeAboutTitle : new FormControl('',[Validators.required,Validators.minLength(2)]),
-      homeAboutDescription : new FormControl('',[Validators.required,Validators.minLength(2)]),
+      homeHeaderTitle:new FormControl(''),
+      homeHeaderImage : new FormControl(null),
+      homeAboutTitle : new FormControl('',),
+      homeAboutDescription : new FormControl(''),
       homeAboutImage : new FormControl(null),
-      homeServicesTitle : new FormControl(null,[Validators.required,Validators.minLength(2)]),
-      homeServicesDescription : new FormControl(null,[Validators.required,Validators.minLength(2)]),
+      homeServicesTitle : new FormControl(null),
+      homeServicesDescription : new FormControl(null),
       homeServicesImage : new FormControl(null),
-      homeCardsTitle : new FormControl(null,[Validators.required,Validators.minLength(2)]),
+      homeCardsTitle : new FormControl(null),
       homeCards:new FormArray ([
         new FormGroup({
-          cardTitle : new FormControl(null,[Validators.required,Validators.minLength(2)]),
-          cardDescription : new FormControl(null,[Validators.required,Validators.minLength(2)]),
+          cardTitle : new FormControl(null),
+          cardDescription : new FormControl(null),
         })]),
-      homeBriefTitle:new FormControl(null,[Validators.required,Validators.minLength(2)]),
+      homeBriefTitle:new FormControl(null),
       homeBriefImage:new FormControl(null),
       homeBlogs:new FormArray ([
         new FormGroup({
-          homeBlogTitle : new FormControl(null,[Validators.required,Validators.minLength(2)]),
-          homeBlogDescription : new FormControl(null,[Validators.required,Validators.minLength(2)]),
+          homeBlogTitle : new FormControl(null),
+          homeBlogDescription : new FormControl(null),
           homeBlogImage: new FormControl(null)
         })]),
     });
@@ -46,8 +48,8 @@ export class HomeDashboardComponent implements OnInit{
   addCard(){
     const control = <FormArray>this.homeForm.get('homeCards');
     control.push(new FormGroup({
-      cardTitle : new FormControl(null,[Validators.required,Validators.minLength(2)]),
-      cardDescription : new FormControl(null,[Validators.required,Validators.minLength(2)]),
+      cardTitle : new FormControl(null),
+      cardDescription : new FormControl(null),
       }));
   }
 
@@ -57,13 +59,11 @@ export class HomeDashboardComponent implements OnInit{
   addBlog(){
     const control = <FormArray>this.homeForm.get('homeBlogs');
     control.push(new FormGroup({
-      homeBlogTitle  : new FormControl(null,[Validators.required,Validators.minLength(2)]),
-      homeBlogDescription : new FormControl(null,[Validators.required,Validators.minLength(2)]),
+      homeBlogTitle  : new FormControl(null),
+      homeBlogDescription : new FormControl(null),
       homeBlogImage: new FormControl(null)
       }));
   }
-
-
 
   onFileChange(event: any, formControlName: string, index: number = -1) {
 
@@ -82,6 +82,21 @@ onSFormSubmit(){
  const formData = new FormData();
  const requestData = {
     sections: [
+
+      {
+        // Home header
+        title: 'Home-Header-section',
+        Contents: [
+          {
+            title: 'homeHeader',
+            type: 'header_paragraph',
+            data: {
+              header: this.homeForm.get('homeHeaderTitle')?.value,
+              homeHeaderImage:''
+            }
+          }
+        ]
+      },
       {
         // Home About
         title: 'Home-about-section',
@@ -164,11 +179,16 @@ onSFormSubmit(){
 
   formData.append('requestData', JSON.stringify(requestData));
 
+  const homeHeaderImage = this.homeForm.get('homeHeaderImage')?.value;
+  formData.append('homeHeaderImage', homeHeaderImage);
+
   const briefImage = this.homeForm.get('homeBriefImage')?.value;
-  const AboutImage = this.homeForm.get('homeAboutImage')?.value;
-  const ServicesImage = this.homeForm.get('homeServicesImage')?.value;
   formData.append('homeBriefImage', briefImage);
+
+  const AboutImage = this.homeForm.get('homeAboutImage')?.value;
   formData.append('homeAboutImage', AboutImage);
+
+  const ServicesImage = this.homeForm.get('homeServicesImage')?.value;
   formData.append('homeServicesImage', ServicesImage);
 
   const blogImages = this.homeForm.get('homeBlogs') as FormArray;

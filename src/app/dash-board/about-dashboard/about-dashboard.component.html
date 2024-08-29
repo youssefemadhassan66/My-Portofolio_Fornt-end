@@ -1,12 +1,20 @@
 <app-nav-dashboard></app-nav-dashboard>
 <div class="body">
-  <div class="form-container">
+ <div class="form-container">
     <form (ngSubmit)="onSFormSubmit()" [formGroup]="aboutForm">
 
       <h2>About Dashboard</h2>
+
+
+      <div class="form-group">
+        <label for="text">About-Header Title</label>
+        <input type="text" placeholder="Aboutheader Title"  formControlName="AboutHeaderTitle" name="AboutHeaderTitle">
+        <label for="">About Header Image</label>
+        <input id="AboutHeaderImage" type="file"  (change)="onFileChange($event,'AboutHeaderImage')">
+      </div>
+
       <!-- Introduction Input -->
       <div class="form-group">
-        <label for="text">Introduction Section</label>
         <label for="text">Introduction Title</label>
         <input type="text" placeholder="Introduction Title"  formControlName="AboutIntroductionTitle" name="AboutIntroductionTitle">
 
@@ -45,7 +53,6 @@
         <div>
       </div>
       <div class="form-group">
-        <label for="text">Goals Section</label>
 
         <label for="text">About Goals Title</label>
         <input type="text" placeholder="Goals Title"  formControlName="AboutGoalsTitle" name="AboutGoalsTitle">
@@ -62,7 +69,7 @@
 
 
       <!-- Submit Button -->
-      <div class="form-group text-center">
+      <div class="form-group ">
         <input type="submit" value="Submit Form"/>
       </div>
     </form>

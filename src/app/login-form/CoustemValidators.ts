@@ -9,8 +9,7 @@ export class CustomValidator{
         return null;
       }
       const ValidPassword = /^(?=[^A-Z]*[A-Z])(?=[^a-z]*[a-z])(?=\D*\d).{8,}$/.test(password);
-      const isValidLength = password.length >=8;
-      const passwordValid = ValidPassword && isValidLength;
+      const passwordValid = ValidPassword;
       return !passwordValid ? {passwordStrength  : true} : null;
     }
   }

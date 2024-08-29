@@ -16,37 +16,28 @@ export class HomeComponent implements OnInit{
   HomeCardSection:any;
   HomeBlogSection:any;
   HomeBriefSection:any;
+  HomeHeaderSection:any;
   constructor(private HomeData:HomeDataService){}
 
   ngOnInit(): void {
     this.HomeData.setPageParam('home');
     this.HomeData.getData().subscribe(data=>{
       this.HomeSectionsData = data;
-      this.findHomeAbout();
-      this.findHomeServices();
-      this.findHomeCards();
-      this.findHomeBlogs();
-      this.findHomeBrief();
+      this.findHomeSections();
       console.log(this.HomeSectionsData);
     });
 
     this.HomeData.setPageParam('home');
   }
 
-  findHomeAbout() {
+  findHomeSections() {
+    this.HomeHeaderSection =  this.HomeSectionsData.find(item => item.title === 'Home-Header-section');
     this.HomeAboutSection =  this.HomeSectionsData.find(Section => Section.title === 'Home-about-section');
-  }
-   findHomeServices() {
-    this.HomeServicesSection =  this.HomeSectionsData.find(item => item.title === 'Home-services-section');
-  }
-  findHomeCards() {
-    this.HomeCardSection =  this.HomeSectionsData.find(item => item.title === 'Home-cards-section');
-  }
-  findHomeBlogs() {
-    this.HomeBlogSection =  this.HomeSectionsData.find(item => item.title === 'Home-blogs-section');
-  }
-  findHomeBrief() {
     this.HomeBriefSection =  this.HomeSectionsData.find(item => item.title === 'Home-brief-section');
+    this.HomeBlogSection =  this.HomeSectionsData.find(item => item.title === 'Home-blogs-section');
+    this.HomeCardSection =  this.HomeSectionsData.find(item => item.title === 'Home-cards-section');
+    this.HomeServicesSection =  this.HomeSectionsData.find(item => item.title === 'Home-services-section');
+
   }
 
 
