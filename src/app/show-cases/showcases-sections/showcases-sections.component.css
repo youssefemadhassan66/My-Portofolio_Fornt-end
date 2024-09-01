@@ -1,16 +1,13 @@
-/* styles.css */
 
 .sections {
-  padding: 50px 20px;
-  background-color: #000;
-  color: white;
+  width: 100%;
+  height: auto;
 }
 
 /* Individual Section */
 .section-item {
   display: flex;
   align-items: center;
-  flex-direction: column;
   justify-content: space-between;
   margin-bottom: 60px;
   position: relative;
@@ -18,14 +15,13 @@
 }
 
 .section-number {
-  font-size: 120px;
+   font-size: 120px;
   font-weight: bold;
   color: rgba(255, 255, 255, 0.153);
-  position: absolute;
-  top: 20px;
-  left: 0;
   z-index: 0;
-  pointer-events: none;
+  position: relative;
+  top: 80px;
+  
 }
 
 .section-content {

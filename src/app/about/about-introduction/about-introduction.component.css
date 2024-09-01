@@ -1,32 +1,44 @@
-.about-introduction-section{
+.about-introduction-section {
   color: white;
   height: 100vh;
   width: 100%;
-  padding: 2rem 0px;
-  margin: 3rem 0px;
+  padding: 2rem 0;
+  margin: 3rem 0;
 }
 
+.about-introduction-img {
+  height: 100%;
+  text-align: center;
+}
 
-.about-introduction-content-container{
+.about-introduction-img img {
+  height: 90%;
+  width: 90%;
+}
+
+.about-introduction-content-container {
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
-.about-introduction-content{
+
+.about-introduction-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 10px;
 }
-.about-introduction-content h1{
-  font-size: 60px;
-}
-.about-introduction-content p{
-  font-size: 15px;
 
+.about-introduction-content h1 {
+  font-size: 50px;
 }
+
+.about-introduction-content p {
+  font-size: 15px;
+  font-family: 'sans';
+}
+
 button {
   font-size: 23px;
   padding: 20px 60px;
@@ -36,22 +48,32 @@ button {
   cursor: pointer;
   transition: all 0.3s ease;
   width: 70%;
+}
 
-  &:hover {
-    background-color: #fff;
-    color: #000;
+button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+@media (max-width: 991.98px) {
+  .about-introduction-section {
+    height: auto;
+  }
+
+  .about-introduction-content h1 {
+    font-size: 36px;
+  }
+
+  .about-introduction-content p {
+    font-size: 14px;
+  }
+
+  button {
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .about-introduction-img img {
+    width: 100%;
   }
 }
-.home-services-img {
-  height: 100%
-}
-.home-services-img img{
-  height: 80%;
-  width: 90%;
-
-}
-
-
-
-
-

@@ -1,5 +1,7 @@
 import { Component, Input, OnInit} from '@angular/core';
 import { Router } from '@angular/router';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 @Component({
   selector: 'app-home-about',
   templateUrl: './home-about.component.html',

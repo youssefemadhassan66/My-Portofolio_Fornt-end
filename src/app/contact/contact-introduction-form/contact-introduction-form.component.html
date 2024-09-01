@@ -1,35 +1,33 @@
 <div class="row Contact-introduction">
-  <div class="col-lg-6 ">
+  <div class="col-sm-12 col-lg-6">
     <div class="Contact-introduction-content">
         <h1>{{Header}}</h1>
         <h3>Send me an email</h3>
     </div>
   </div>
-  <div class="col-6">
+  <div class="col-sm-12 col-lg-6">
     <div class="form-container">
       <form (ngSubmit)="onSFormSubmit()" [formGroup]="MailMeForm">
 
-        <h2>Send me a message</h2>
         <!-- Mail Form -->
         <div class="form-group">
           <label for="text">Full name</label>
-          <input type="text" placeholder="Mail Name"  formControlName="MailName" name="MailName">
+          <input type="text" placeholder="Mail Name" formControlName="MailName" name="MailName" class="form-control">
 
           <label for="text">Subject</label>
-          <input type="text" placeholder="Mail Subject"  formControlName="MailSubject" name="MailSubject">
+          <input type="text" placeholder="Mail Subject" formControlName="MailSubject" name="MailSubject" class="form-control">
 
           <label for="">Email-address</label>
-          <input type="text" placeholder="MailEmail"  formControlName="MailEmail" name="MailEmail">
+          <input type="text" placeholder="Mail Email" formControlName="MailEmail" name="MailEmail" class="form-control">
 
           <label for="">Message description</label>
-          <textarea name="MailDescription" id="MailDescription" formControlName="MailDescription" placeholder="Write Description here"></textarea>
+          <textarea name="MailDescription" id="MailDescription" formControlName="MailDescription" placeholder="Write Description here" class="form-control"></textarea>
 
-          <div class="form-group ">
-            <input type="submit" value="Submit Form"/>
+          <div class="form-group text-center">
+            <button type="submit" class="btn btn-primary">Submit Form</button>
           </div>
         </div>
       </form>
-
+    </div>
   </div>
-</div>
 </div>

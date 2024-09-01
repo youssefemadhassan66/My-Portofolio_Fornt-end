@@ -14,3 +14,21 @@ body{
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'sansItalic';
+  src: url('/assets/fonts/serirf/OpenSans-Italic.ttf') ;
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'sans';
+  src: url('/assets/fonts/serirf/OpenSans.ttf') ;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'billie';
+  src: url('/assets/fonts/billie/billie eilish.ttf') ;
+}
+

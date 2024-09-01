@@ -1,13 +1,18 @@
-<div class="row Showcases-Introduction">
-  <div class="col-lg-12">
-    <p>{{header}}</p>
-    <h1>
-      {{description}}
-    </h1>
-  </div>
-  <div class="col-lg-12">
-    <img [src]="image" alt="">
-  </div>
-</div>
+<div class=" Showcases-Introduction">
+    <div class="row Showcases-Introduction-container">
+      <div class="col-lg-12 Showcases-Introduction-content-container">
+        <p id="Colored-header">{{header}}</p>
+        <h1>
+          {{description}}
+        </h1>
+      </div>
+      <div class="col-lg-12">
+        <div class="img-container-gradient">
+          <div class="gradient-overlay"></div> <!-- Added for the gradient -->
+          <img [src]="image" alt="">
+        </div>
+      </div>
 
+    </div>
+</div>
 <!-- Working as Full-Stack Web Develope -->

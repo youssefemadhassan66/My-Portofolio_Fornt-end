@@ -1,0 +1,48 @@
+.Showcases-Introduction{
+  width: 100%;
+  padding: 150px 0px;
+
+}
+#Colored-header{
+  color: #ebdda3fb;
+
+}
+.Showcases-Introduction-container{
+  display: flex;
+  flex-direction: column;
+  gap: 250px;
+}
+.Showcases-Introduction-content-container{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+
+}
+.Showcases-Introduction-content-container h1{
+  font-size: 50px;
+  width: 95%;
+
+}
+
+.img-container-gradient {
+  width: 100%;
+  position: relative;
+}
+
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(#00000096, #00000046);
+  z-index: 2;
+}
+
+.img-container-gradient img {
+  width: 100%;
+  max-height: 50%;
+  position: relative;
+  z-index: 1;
+}

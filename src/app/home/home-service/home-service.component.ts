@@ -2,6 +2,8 @@ import { Component ,Input,OnInit} from '@angular/core';
 import { HostListener } from '@angular/core';
 import { handleScroll } from '../home.animation';
 import { Router } from '@angular/router';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 @Component({
   selector: 'app-home-service',
   templateUrl: './home-service.component.html',
@@ -21,7 +23,7 @@ export class HomeServiceComponent implements OnInit {
     this.description = this.HomeServicesFromParent.Contents[0].data.description;
     this.image = this.HomeServicesFromParent.Contents[0].data.homeServicesImage.image;
   }
-  onNvigate(){
+  onNavigate(){
     this.router.navigate(['/showcases']);
   }
 

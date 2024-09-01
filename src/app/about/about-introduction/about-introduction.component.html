@@ -1,23 +1,18 @@
-
-<div class="Home-service-section about-introduction-section">
+<div class="about-introduction-section">
   <div class="row h-100">
-    <div class="col-lg-5 home-services-img about-introduction-img">
-          <div class="scroll-container" >
-            <img [src]="image"  alt="Scrolling Image q">
-          </div>
-        </div>
+    <div class="col-lg-5 col-md-12 about-introduction-img" data-aos="fade-right" data-aos-duration="1000">
+      <div class="scroll-container">
+        <img [src]="image" alt="Scrolling Image q">
+      </div>
+    </div>
 
-        <div class="col-1"></div>
+    <div class="col-1 d-none d-lg-block"></div>
 
-        <div class="col-lg-6 home-services-content-container about-introduction-content-container">
-          <div class="about-introduction-content">
-              <h1>
-                {{Header}}
-              </h1>
-              <p>
-              {{description}}
-            </p>
-          </div>
-        </div>
+    <div class="col-lg-6 col-md-12 about-introduction-content-container" data-aos="fade-left" data-aos-duration="1500">
+      <div class="about-introduction-content">
+        <h1>{{Header}}</h1>
+        <p>{{description}}</p>
+      </div>
+    </div>
   </div>
 </div>

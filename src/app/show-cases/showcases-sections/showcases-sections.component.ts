@@ -8,8 +8,10 @@ import { Component ,Input,OnInit} from '@angular/core';
 export class ShowcasesSectionsComponent implements OnInit{
   @Input() showCasesSectionsFromParent:any;
   Sections:any[]= [];
+  SectionImages:any[]= [];
   ngOnInit(): void {
     this.Sections = this.showCasesSectionsFromParent.Contents[0].data.ShowcasesSections;
+
   }
 
 }

@@ -1,14 +1,14 @@
-<div class="blog-home hide-scrollbar">
+<div class="blog-home hide-scrollbar" data-aos="fade-right" data-aos-duration="2000">
   <div class="swiper-container h-100 row">
     <div class="swiper-wrapper h-100">
-      <div class="swiper-slide blog-home-card col-lg-4" *ngFor="let blog of Blogs">
+      <div class="swiper-slide blog-home-card col-lg-4 col-md-6 col-sm-12" *ngFor="let blog of Blogs">
         <div class="card">
           <img [src]="blog.homeBlogImage.image" alt="Card Image">
           <div class="card-content">
             <h1 class="blog-title">{{ blog.homeBlogTitle }}</h1>
             <p class="blog-disc">{{ blog.homeBlogDescription }}</p>
             <div class="blog-button">
-                <button><a href="">Read more</a></button>
+              <button><a href="">Read more</a></button>
             </div>
           </div>
         </div>
@@ -16,5 +16,4 @@
     </div>
     <div class="swiper-pagination"></div>
   </div>
-
 </div>

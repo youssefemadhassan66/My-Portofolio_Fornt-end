@@ -1,25 +1,21 @@
 <div class="Home-about-section">
   <div class="row h-100">
-    <div class="col-lg-6 home-about-content-container">
+    <div class="col-lg-6 col-md-12 home-about-content-container" data-aos="flip-left" data-aos-duration="1500">
       <div class="home-about-content w-100">
-          <h1>
-            {{Header}}
-          </h1>
-          <p>
-            {{description}}
-            <!-- Let's be honest and cut through the marketing bullshit, you need a website that <br> looks amazing and actually works.
-            Bottom line,that's what I do. If you want to <br>learn more about working with me, take a look through my website. -->
-        </p>
+        <h1>{{Header}}</h1>
+        <p>{{description}}</p>
         <button (click)="onNvigate()">About us</button>
       </div>
     </div>
 
-    <div class="col-1"></div>
+    <div class="col-lg-1 d-none d-lg-block"></div>
 
-    <div class="col-lg-5 home-about-img">
-        <div class="scroll-container w-100" >
-          <img [src]="image"  alt="Scrolling Image q">
-        </div>
+    <div class="col-lg-5 col-md-12 home-about-img" data-aos="fade-left" data-aos-duration="1500">
+      <div class="scroll-container w-100">
+        <img [src]="image" alt="Scrolling Image">
+      </div>
     </div>
   </div>
 </div>
+      <!-- Let's be honest and cut through the marketing bullshit, you need a website that <br> looks amazing and actually works.
+            Bottom line,that's what I do. If you want to <br>learn more about working with me, take a look through my website. -->

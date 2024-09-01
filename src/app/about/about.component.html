@@ -1,4 +1,4 @@
-<div *ngIf="AboutHeaderSection">
+<div *ngIf="AboutHeaderSection" data-aos="fade-right">
   <app-about-header [AboutHeaderDataFromParent]="AboutHeaderSection"></app-about-header>
 </div>
 <div class="home-container">
@@ -7,11 +7,9 @@
   </div>
 
   <div *ngIf="AboutProfessionalBackgroundSection">
-  </div>
-
-  <div *ngIf="AboutProfessionalBackgroundSection">
     <app-aboutprofessional-background [AboutProfessionalBackgroundFromParent]="AboutProfessionalBackgroundSection"></app-aboutprofessional-background>
   </div>
+
 
   <div *ngIf="AboutProjectsSection">
     <app-about-projects [AboutProjectsFromParent]="AboutProjectsSection"></app-about-projects>

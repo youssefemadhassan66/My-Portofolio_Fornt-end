@@ -1,8 +1,59 @@
-
-.home-container{
+.home-container {
   position: relative;
   width: 90%;
   margin: auto;
   color: white;
   font-family: 'booni';
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .home-container {
+    width: 95%;
+  }
+
+  .home-container h1 {
+    font-size: 2.5rem;
+  }
+
+  .home-container p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .home-container h1 {
+    font-size: 2rem;
+  }
+
+  .home-container p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  .home-container h1 {
+    font-size: 1.75rem;
+  }
+
+  .home-container p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .home-container h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .home-container p {
+    font-size: 0.8rem;
+    text-align: center;
+  }
 }

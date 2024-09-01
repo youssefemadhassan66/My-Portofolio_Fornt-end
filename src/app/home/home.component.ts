@@ -2,6 +2,8 @@ import { AfterViewInit, Component,OnInit } from '@angular/core';
 import { HostListener } from '@angular/core';
 import { handleScroll } from './home.animation';
 import { HomeDataService } from '../services/home-data.service';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -20,6 +22,7 @@ export class HomeComponent implements OnInit{
   constructor(private HomeData:HomeDataService){}
 
   ngOnInit(): void {
+    AOS.init();
     this.HomeData.setPageParam('home');
     this.HomeData.getData().subscribe(data=>{
       this.HomeSectionsData = data;

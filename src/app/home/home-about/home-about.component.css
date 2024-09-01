@@ -1,31 +1,33 @@
-.Home-about-section{
+.Home-about-section {
   color: white;
   height: 100vh;
   width: 100%;
-  padding: 2rem 0px;
-  margin: 3rem 0px;
+  padding: 2rem 0;
+  margin: 3rem 0;
 }
 
-.home-about-content-container{
+.home-about-content-container {
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
-.home-about-content{
+
+.home-about-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 10px;
 }
-.home-about-content h1{
+
+.home-about-content h1 {
   font-size: 50px;
 }
-.home-about-content p{
-  font-size: 15px;
 
+.home-about-content p {
+  font-size: 15px;
 }
+
 button {
   font-size: 23px;
   padding: 20px 60px;
@@ -35,22 +37,43 @@ button {
   cursor: pointer;
   transition: all 0.3s ease;
   width: 70%;
+}
 
-  &:hover {
-    background-color: #fff;
-    color: #000;
-  }
+button:hover {
+  background-color: #fff;
+  color: #000;
 }
+
 .home-about-img {
-  height: 100%
+  height: 100%;
+  text-align: center;
 }
-.home-about-img img{
+
+.home-about-img img {
   height: 90%;
   width: 90%;
-
 }
 
+@media (max-width: 991.98px) {
+  .Home-about-section {
+    height: auto;
+  }
 
+  .home-about-content h1 {
+    font-size: 36px;
+  }
 
+  .home-about-content p {
+    font-size: 14px;
+  }
 
+  button {
+    width: 100%;
+    font-size: 18px;
+  }
 
+  .home-about-img img {
+    width: 100%;
+    height: auto;
+  }
+}

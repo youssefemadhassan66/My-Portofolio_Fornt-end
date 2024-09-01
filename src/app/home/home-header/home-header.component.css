@@ -1,8 +1,8 @@
-
 .header-section {
   width: 100%;
   height: 100vh;
   position: relative;
+  font-family: 'billie';
 }
 
 .header-section::before {
@@ -26,23 +26,40 @@ video {
   z-index: 1;
 }
 
-.header-content, .header-buttons {
+.HeaderContentContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
   position: relative;
   z-index: 2;
-  color: white;
   text-align: center;
 }
 
 .header-content {
   display: flex;
-  height: 400px;
-  justify-content: end;
   flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
 .header-content h1 {
-  font-size: 5rem;
-  margin-bottom: 20px;
+  font-size: 6rem;
+  color: #fff;
+}
+
+.auto-type {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+}
+
+.auto-type.typing-active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .header-buttons {
@@ -52,13 +69,15 @@ video {
 }
 
 .header-buttons button {
-  font-size: 23px;
-  padding: 20px 60px;
+  font-size: 15px;
+  padding: 20px 50px;
   border: 2px solid #fff;
   background: transparent;
   color: #fff;
   cursor: pointer;
   transition: all 0.3s ease;
+  width: 180px;
+  height: 65px;
 }
 
 .header-buttons .btn-outline:hover {
@@ -74,4 +93,44 @@ video {
 .header-buttons .btn-play:hover {
   background-color: transparent;
   color: #fff;
+}
+
+/* Responsive Styling */
+@media (max-width: 991.98px) {
+  .header-content h1 {
+    font-size: 4.5rem;
+  }
+
+  .header-buttons button {
+    font-size: 14px;
+    padding: 15px 40px;
+    width: 150px;
+    height: 55px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .header-content h1 {
+    font-size: 3.5rem;
+  }
+
+  .header-buttons button {
+    font-size: 12px;
+    padding: 10px 30px;
+    width: 130px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .header-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .header-buttons button {
+    font-size: 11px;
+    padding: 8px 25px;
+    width: 120px;
+    height: 40px;
+  }
 }

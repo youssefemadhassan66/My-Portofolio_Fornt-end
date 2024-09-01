@@ -1,5 +1,8 @@
 import { AfterViewInit, Component,OnInit } from '@angular/core';
-import { HomeDataService } from '../services/home-data.service';@Component({
+import { HomeDataService } from '../services/home-data.service';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+@Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
   styleUrl: './about.component.css'
@@ -14,14 +17,11 @@ export class AboutComponent implements OnInit{
   AboutHeaderSection:any;
   constructor(private AboutData:HomeDataService){}
   ngOnInit(): void {
-
+    AOS.init();
     this.AboutData.setPageParam('about');
     this.AboutData.getData().subscribe(data=>{
       this.AboutSectionsData = data;
       this.findAboutSections();
-      console.log(this.AboutSectionsData);
-      console.log(this.AboutHeaderSection);
-      console.log(this.AboutProfessionalBackgroundSection);
     });
 
   }

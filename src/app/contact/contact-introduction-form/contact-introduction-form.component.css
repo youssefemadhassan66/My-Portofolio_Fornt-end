@@ -1,38 +1,36 @@
-
-.Contact-container{
+.Contact-introduction {
   position: relative;
   width: 90%;
   margin: auto;
   color: white;
   font-family: 'booni';
   height: 100vh;
+  padding: 30px 0px;
+  margin-top: 100px;
 }
 
-.Contact-introduction{
-  height:   100vh;
-
-}
-
-.Contact-introduction-content{
+.Contact-introduction-content {
   width: 100%;
-  height: 50%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-
+  padding: 20px 0px;
 }
 
-.Contact-introduction-content h1{
-  font-size: 90px;
+.Contact-introduction-content h1 {
+  font-size: 6.5rem;
+  margin-bottom: 20px;
 }
 
 ::placeholder {
   color:#ffffffce;
-  opacity: 0.8; /* Firefox */
+  opacity: 0.8;
 }
+
 .body {
   background-color: #000;
-  color: #FFf;
+  color: #FFF;
   margin: 0;
   padding: 50px;
   display: flex;
@@ -44,22 +42,17 @@
 .form-container {
   color: #fff;
   background-color: #000;
+  border-radius: 10px;
   padding: 30px;
-  box-shadow: 2 4px 8px rgba(255, 255, 255, 0.1);
-  width: 800px;
-
-}
-
-h2 {
-  text-align: center;
-  margin-bottom: 25px;
-  color: white;
-  font-size: 4rem;
+  box-shadow: #b8ad803b 0px 10px 36px 0px, #b8ad8067 0px 0px 0px 1px;
+  /* box-shadow: #b8ad8067  0px 50px 100px -20px, #b8ad803b 0px 30px 60px -30px, #b8ad803b 0px -2px 6px 0px inset; */
+  width: 100%;
+  max-width: 800px;
 }
 
 .form-group {
-  margin-bottom: 50px;
-  padding: 20px;
+  margin-bottom: 30px;
+  padding: 20px 0;
 }
 
 label {
@@ -71,70 +64,104 @@ label {
 }
 
 input,
-select,
 textarea {
-  font-size: 3rem;
+  font-size: 1rem;
   color: white;
-  width: 90%;
-  padding: 25px 15px;
+  width: 100%;
+  padding: 15px;
   border: 1px solid #b8ad8067;
   box-sizing: border-box;
-  font-size: 16px;
   transition: border-color 0.3s;
-  border-radius: 5PX;
+  border-radius: 5px;
   margin-bottom: 20px;
   background-color: #000;
 }
+
 textarea {
   height: 150px;
-
 }
 
 input:focus,
-select:focus,
 textarea:focus {
   border-color: #FFF;
   outline: none;
+  background-color: #000;
 }
 
-
 button {
-  width: 90%;
-  padding: 22px 15px;
-  background-color: #dfdfdf;
-  border: none;
+  font-family: 'sans';
+  font-weight: 500;
+  width: 100%;
+  height: 60px;
+  background-color: #000;
+  border: 1px solid #fff;
   border-radius: 5px;
-  color: #000;
-  font-size: 18px;
+  color: #fff;
+  font-size: 1.2rem;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 button:hover {
-  background-color: #b8ad8067;
-  color: #fff;
-}
-
-.form-group-inline {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.form-group-inline label {
-  margin-right: 10px;
-  margin-bottom: 0;
+  background-color: #ffffffee;
+  color: #000;
 }
 
 .text-center {
   text-align: center;
 }
-input.ng-invalid.ng-touched
-{
+
+input.ng-invalid.ng-touched {
   border: 2px solid red;
 }
 
-.msg{
+.msg {
   font-size: x-small;
   color: red;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+  .Contact-introduction-content h1 {
+    font-size: 3rem;
+  }
+
+  .form-container {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .Contact-introduction {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .Contact-introduction-content h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  .Contact-introduction-content h3{
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .form-container {
+    width: 100%;
+    padding: 15px;
+  }
+
+  label {
+    font-size: 1rem;
+  }
+
+  input, textarea {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  button {
+    font-size: 1rem;
+    height: 50px;
+  }
 }

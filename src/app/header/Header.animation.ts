@@ -10,21 +10,23 @@ export function handleScroll(): void {
   }
 }
 
-export function headerTyping(word: string): void {
-  const options = {
-    strings: [
-      `<span style="color:#fff;">${word}</span>`,
-    ],
-    typeSpeed: 85,
-    backSpeed: 85,
-    loop: true,
-  };
-
+export function headerTyping(word: string[]): void {
   const typedElement = document.querySelector('.auto-type');
+
   if (typedElement) {
+    // Add the .typing-active class to trigger the CSS transition
+    typedElement.classList.add('typing-active');
+
+    const options = {
+      strings: word,
+      typeSpeed: 90,
+      backSpeed: 90,
+      loop: true,
+      showCursor: false,
+    };
+
     new Typed('.auto-type', options);
   } else {
     console.warn("Element with class 'auto-type' not found.");
   }
 }
-

@@ -1,32 +1,43 @@
-.Home-service-section{
+.Home-service-section {
   color: white;
   height: 100vh;
   width: 100%;
-  padding: 2rem 0px;
-  margin: 3rem 0px;
+  padding: 2rem 0;
+  margin: 3rem 0;
 }
 
+.home-services-img {
+  height: 100%;
+  text-align: center;
+}
 
-.home-services-content-container{
+.home-services-img img {
+  height: 90%;
+  width: 90%;
+}
+
+.home-services-content-container {
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
-.home-services-content{
+
+.home-services-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 10px;
 }
-.home-services-content h1{
+
+.home-services-content h1 {
   font-size: 50px;
 }
-.home-services-content p{
-  font-size: 15px;
 
+.home-services-content p {
+  font-size: 15px;
 }
+
 button {
   font-size: 23px;
   padding: 20px 60px;
@@ -36,22 +47,33 @@ button {
   cursor: pointer;
   transition: all 0.3s ease;
   width: 70%;
+}
 
-  &:hover {
-    background-color: #fff;
-    color: #000;
+button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+@media (max-width: 991.98px) {
+  .Home-service-section {
+    height: auto;
+  }
+
+  .home-services-content h1 {
+    font-size: 36px;
+  }
+
+  .home-services-content p {
+    font-size: 14px;
+  }
+
+  button {
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .home-services-img img {
+    width: 100%;
+    height: auto;
   }
 }
-.home-services-img {
-  height: 100%
-}
-.home-services-img img{
-  height: 90%;
-  width: 90%;
-
-}
-
-
-
-
-

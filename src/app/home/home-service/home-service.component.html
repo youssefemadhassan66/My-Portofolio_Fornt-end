@@ -1,28 +1,27 @@
-
 <div class="Home-service-section">
   <div class="row h-100">
-    <div class="col-lg-5 home-services-img">
-          <div class="scroll-container" >
-            <img [src]="image"  alt="Scrolling Image q">
-          </div>
-        </div>
+    <div class="col-lg-5 col-md-12 home-services-img" data-aos="flip-right" data-aos-duration="1000">
+      <div class="scroll-container">
+        <img [src]="image" alt="Scrolling Image q">
+      </div>
+    </div>
 
-        <div class="col-1"></div>
+    <div class="col-1 d-none d-lg-block"></div>
 
-        <div class="col-lg-6 home-services-content-container">
-          <div class="home-services-content">
-              <h1>
-                {{Header}}
-                <!-- Being a Squarespace Developer <br>
-                & Designer is my primary focus. -->
-              </h1>
-              <p>
-                {{description}}
-                <!-- Let's be honest and cut through the marketing bullshit, you need a website that <br> looks amazing and actually works.
-                Bottom line,that's what I do. If you want to <br>learn more Contact working with me, take a look through my website. -->
-            </p>
-            <button (click)="onNvigate()">Our services</button>
-          </div>
-        </div>
+    <div class="col-lg-6 col-md-12 home-services-content-container" data-aos="fade-left" data-aos-duration="1500">
+      <div class="home-services-content">
+        <h1>
+          {{Header}}
+          <!-- Being a Squarespace Developer <br>
+          & Designer is my primary focus. -->
+        </h1>
+        <p>
+          {{description}}
+          <!-- Let's be honest and cut through the marketing bullshit, you need a website that <br> looks amazing and actually works.
+          Bottom line, that's what I do. If you want to <br> learn more about working with me, take a look through my website. -->
+        </p>
+        <button (click)="onNavigate()">Our services</button>
+      </div>
+    </div>
   </div>
 </div>

@@ -1,6 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { headerTyping } from '../../header/Header.animation';
 import { Router } from '@angular/router';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 @Component({
   selector: 'app-home-header',
   templateUrl: './home-header.component.html',
@@ -12,16 +15,17 @@ export class HomeHeaderComponent implements OnInit {
   header: string = '';
   video: any;
 
-  constructor() { }
 
+  constructor() { }
   ngOnInit(): void {
-    if (this.HomeHeaderFromParent && this.HomeHeaderFromParent.Contents && this.HomeHeaderFromParent.Contents[0]) {
+       AOS.init();
       this.header = this.HomeHeaderFromParent.Contents[0].data?.header || '';
       this.video = this.HomeHeaderFromParent.Contents[0].data?.homeHeaderImage?.video || '';
-      headerTyping(this.header);
-    } else {
-      console.warn('HomeHeaderFromParent or its Contents are undefined.');
-    }
+
+      const wordsArray = this.header.split(" ");
+      const newArray:any = [];
+      wordsArray.forEach(word => {newArray.push(word);});
+      headerTyping(newArray);
   }
 
 }

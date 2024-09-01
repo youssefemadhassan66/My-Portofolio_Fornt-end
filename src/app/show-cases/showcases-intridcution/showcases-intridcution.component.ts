@@ -13,7 +13,7 @@ export class ShowcasesIntridcutionComponent implements OnInit{
   ngOnInit(): void {
     this.header = this.showCasesIntroductionFromParent.Contents[0].data.header;
     this.description = this.showCasesIntroductionFromParent.Contents[0].data.description;
-    this.image = this.showCasesIntroductionFromParent.Contents[0].data.ShowCasesIntroductionImage
+    this.image = this.showCasesIntroductionFromParent.Contents[0].data.ShowCasesIntroductionImage.image
 
   }
 }
