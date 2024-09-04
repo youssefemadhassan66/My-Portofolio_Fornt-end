@@ -1,16 +1,22 @@
 <section class="sections">
   <div class="section-item" *ngFor="let section of Sections;let i = index">
-    <div class="section-content-container">
-     <div class="section-number">0{{i+1}}</div>
-      <div class="section-content">
-          <h2>{{section.sectionTitle}}</h2>
-          <p>
-            {{section.sectionDescription}}
-          </p>
+  <div class="section-container">
+      <div class="section-content-container" data-aos="fade-right" data-aos-duration="1000">
+      <div class="section-number">0{{i+1}}</div>
+        <div class="section-content">
+            <h2>{{section.sectionTitle}}</h2>
+            <p>
+              {{section.sectionDescription}}
+            </p>
+        </div>
+      </div>
+      <div class="section-image-container" data-aos="fade-left" data-aos-duration="1500">
+        <div class="gradient-overlay"></div>
+        <img [src]="section.sectionImage.image" alt="Card Image">
       </div>
     </div>
-    <div class="section-image-container">
-      <img [src]="section.sectionImage.image" alt="Card Image">
+    <div class="Section-button" data-aos="fade-up" data-aos-duration="1600">
+    <button (click)="navigationLink(section.sectionLink)">Github</button>
     </div>
   </div>
 </section>

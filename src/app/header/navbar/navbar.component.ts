@@ -8,6 +8,7 @@ import 'aos/dist/aos.css';
 })
 export class NavbarComponent implements OnInit{
 
+  isToggled:boolean=false;
   ngOnInit(): void {
     AOS.init();
 
@@ -19,4 +20,13 @@ export class NavbarComponent implements OnInit{
     {path:"/contact",label:"Contact me"},
     {path:"/showcases",label:"Services"}
   ]
+
+  toggleButtons = [
+    'fa-solid fa-bars',
+    'fa-solid fa-xmark',
+  ]
+  toggleClass() {
+    this.isToggled = !this.isToggled;
+  }
+
 }

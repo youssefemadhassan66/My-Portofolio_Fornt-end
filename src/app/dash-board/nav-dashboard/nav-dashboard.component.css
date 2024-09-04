@@ -9,6 +9,7 @@ a{
     width: 100%;
     border-bottom: 1px  #ffffff7c solid;
     z-index: 2;
+    font-family: 'billie';
   }
 
   .nav-container{

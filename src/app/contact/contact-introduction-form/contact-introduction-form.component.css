@@ -21,6 +21,7 @@
 .Contact-introduction-content h1 {
   font-size: 6.5rem;
   margin-bottom: 20px;
+  font-family: 'booni';
 }
 
 ::placeholder {
@@ -74,7 +75,7 @@ textarea {
   transition: border-color 0.3s;
   border-radius: 5px;
   margin-bottom: 20px;
-  background-color: #000;
+  background-color: transparent;
 }
 
 textarea {
@@ -83,9 +84,10 @@ textarea {
 
 input:focus,
 textarea:focus {
-  border-color: #FFF;
+  border-color: #fff;
+  color: #fff;
   outline: none;
-  background-color: #000;
+  background-color: transparent;
 }
 
 button {
@@ -111,16 +113,19 @@ button:hover {
   text-align: center;
 }
 
-input.ng-invalid.ng-touched {
+/* input.ng-invalid.ng-touched {
   border: 2px solid red;
 }
 
 .msg {
   font-size: x-small;
   color: red;
-}
+} */
 
 /* Responsive Adjustments */
+
+
+
 @media (max-width: 991.98px) {
   .Contact-introduction-content h1 {
     font-size: 3rem;

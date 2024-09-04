@@ -17,7 +17,6 @@ import { BriefComponent } from './home/brief/brief.component';
 import { BlogPostComponent } from './home/blog-post/blog-post.component';
 import { FooterDiscreptionComponent } from './footer/footer-discreption/footer-discreption.component';
 import { FooterCopyrightComponent } from './footer/footer-copyright/footer-copyright.component';
-import { DashBoardComponent } from './dash-board/dash-board.component';
 import { ShowCasesComponent } from './show-cases/show-cases.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { HomeDashboardComponent } from './dash-board/home-dashboard/home-dashboard.component';
@@ -57,7 +56,6 @@ import { ShowcasesHeaderComponent } from './show-cases/showcases-header/showcase
     BlogPostComponent,
     FooterDiscreptionComponent,
     FooterCopyrightComponent,
-    DashBoardComponent,
     ShowCasesComponent,
     LoginFormComponent,
     HomeDashboardComponent,

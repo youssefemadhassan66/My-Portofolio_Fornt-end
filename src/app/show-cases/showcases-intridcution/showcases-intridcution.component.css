@@ -1,10 +1,12 @@
 .Showcases-Introduction{
   width: 100%;
   padding: 150px 0px;
+  font-family: 'billie';
 
 }
 #Colored-header{
   color: #ebdda3fb;
+  font-family: 'Times New Roman', Times, serif;
 
 }
 .Showcases-Introduction-container{
@@ -26,7 +28,6 @@
 }
 
 .img-container-gradient {
-  width: 100%;
   position: relative;
 }
 

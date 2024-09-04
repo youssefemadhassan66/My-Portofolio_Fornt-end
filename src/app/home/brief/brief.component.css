@@ -5,6 +5,7 @@
   background-size: cover;
   border-radius: 10px;
   transition: all 0.3s ease-in-out;
+  font-family: 'billie';
 }
 
 .breif-gradiant {
@@ -31,7 +32,7 @@
 }
 
 .brief:hover {
-  box-shadow: #0e334f 0px 5px 15px 0px;
+  box-shadow: #7e7e7e 0px 5px 15px 0px;
   transform: scale(1.01);
 }
 

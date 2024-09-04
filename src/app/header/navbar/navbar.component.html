@@ -1,15 +1,48 @@
 <nav class="navbar" data-aos="fade-down">
   <div class="nav-container row " >
-    <div class="col-xl-2 d-flex align-content-center ">
+    <div class="col-xl-2 d-flex nav-logo ">
       <a class="navbar-brand" href="#"><img [src]="brand_logo" alt=""></a>
     </div>
-    <div class="col-xl-8 d-flex justify-content-center ">
+    <div class="col-xl-8 d-flex justify-content-center navlist-container">
       <ul class="navbar-list d-flex flex-row">
         <li *ngFor="let NavItem  of navLinks"><a [routerLink]="NavItem.path" routerLinkActive="active"> <h6>{{NavItem.label}} </h6></a></li>
       </ul>
     </div>
-    <div class="col-xl-2 d-flex justify-content-end nav-end">
+    <div class="col-xl-2 d-flex justify-content-end nav-end nav-login-button">
         <a routerLink="/login"><p>LOGIN</p></a>
     </div>
   </div>
+
 </nav>
+
+
+<!-- Responsive navbar -->
+<div class="mobile-nav d-flex" data-aos="fade-down">
+  <div class="mobile-nav-container row">
+    <div class="col-6 moblie-nav-logo ">
+      <a class="mobile-navbar-brand" href="#"><img [src]="brand_logo" alt=""></a>
+    </div>
+
+    <div  class="col-6 moblie-nav-toggle-buttons d-flex justify-content-end">
+      <i (click)="toggleClass()" [ngClass]="isToggled ? 'fa-solid fa-xmark' : 'fa-solid fa-bars' "></i>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Sidebar -->
+<div class="nav-sidebar"  [ngClass]="isToggled ? 'move-left' : 'move-right' " >
+  <div class="sidebar-container">
+    <div  class="sidebar-toggle-buttons d-flex justify-content-between">
+      <h1>Navigation bar</h1>
+      <i (click)="toggleClass()"  [ngClass]="isToggled ? 'fa-solid fa-xmark' : 'fa-solid fa-bars' "></i>
+    </div>
+    <ul class="sidebar-list d-flex flex-column">
+      <li *ngFor="let NavItem  of navLinks"><a [routerLink]="NavItem.path" routerLinkActive="active"> <h6>{{NavItem.label}} </h6></a></li>
+      <li><h6>login </h6></li>
+    </ul>
+
+  </div>
+</div>
+

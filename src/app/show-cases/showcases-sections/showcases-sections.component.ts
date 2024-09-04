@@ -13,5 +13,12 @@ export class ShowcasesSectionsComponent implements OnInit{
     this.Sections = this.showCasesSectionsFromParent.Contents[0].data.ShowcasesSections;
 
   }
+  navigationLink(url:string){
+    if (url) {
+      window.open(url, '_blank');
+    }
+
+  }
+
 
 }

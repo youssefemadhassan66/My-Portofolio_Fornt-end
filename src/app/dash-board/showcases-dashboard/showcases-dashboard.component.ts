@@ -27,7 +27,8 @@ export class ShowcasesDashboardComponent implements OnInit{
         new FormGroup({
           sectionTitle : new FormControl(null),
           sectionDescription : new FormControl(null),
-          sectionImage: new FormControl(null)
+          sectionImage: new FormControl(null),
+          sectionLink:new FormControl(null)
         })]),
     });
     this.ShowcasesData.setPageParam('showCases');
@@ -42,7 +43,8 @@ export class ShowcasesDashboardComponent implements OnInit{
     control.push(new FormGroup({
       sectionTitle  : new FormControl(null),
       sectionDescription : new FormControl(null),
-      sectionImage: new FormControl(null)
+      sectionImage: new FormControl(null),
+      sectionLink:new FormControl(null)
       }));
   }
 

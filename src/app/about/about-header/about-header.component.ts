@@ -12,7 +12,7 @@ export class AboutHeaderComponent implements OnInit {
   video:any;
   ngOnInit(): void {
     this.header = this.AboutHeaderDataFromParent.Contents[0]?.data?.header || '';
-    this.video = this.AboutHeaderDataFromParent.Contents[0]?.data?.AboutHeaderImage?.video || '';
+    this.video = this.AboutHeaderDataFromParent.Contents[0]?.data?.AboutHeaderImage?.image || '';
   }
 
 }

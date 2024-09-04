@@ -6,6 +6,7 @@
   align-items: center;
   justify-content: center;
   margin: auto;
+  font-family: 'billie';
 
 }
 .h-container{
@@ -26,7 +27,6 @@ h1 {
   padding: 0 15px;
   word-break: break-word;
   text-align: center;
-  font-family: 'sansItalic' ;
 
 
 }

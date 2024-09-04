@@ -22,10 +22,12 @@
 
 .home-about-content h1 {
   font-size: 50px;
+  font-family: 'billie';
 }
 
 .home-about-content p {
-  font-size: 15px;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 button {
@@ -37,6 +39,7 @@ button {
   cursor: pointer;
   transition: all 0.3s ease;
   width: 70%;
+  font-family: 'billie';
 }
 
 button:hover {

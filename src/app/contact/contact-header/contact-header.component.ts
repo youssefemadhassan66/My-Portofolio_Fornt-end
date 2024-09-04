@@ -13,7 +13,7 @@ export class ContactHeaderComponent implements OnInit{
   ngOnInit(): void {
     console.log(this.ContactHeaderSectionFromParent);
     this.header = this.ContactHeaderSectionFromParent.Contents[0].data?.header || '';
-    this.video = this.ContactHeaderSectionFromParent.Contents[0].data?.contactHeaderImage?.video || '';
+    this.video = this.ContactHeaderSectionFromParent.Contents[0].data?.contactHeaderImage?.image || '';
 
   }
 }

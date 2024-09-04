@@ -12,7 +12,7 @@ export class ShowcasesHeaderComponent implements OnInit{
   ngOnInit(): void {
 
     this.header = this.ShowcasesHeaderFromParent.Contents[0].data.header;
-    this.video = this.ShowcasesHeaderFromParent.Contents[0].data.ShowCasesHeaderImage.video;
+    this.video = this.ShowcasesHeaderFromParent.Contents[0].data.ShowCasesHeaderImage.image;
 
   }
 

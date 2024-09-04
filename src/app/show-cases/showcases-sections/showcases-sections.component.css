@@ -6,14 +6,18 @@
 
 /* Individual Section */
 .section-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+
   margin-bottom: 60px;
   position: relative;
 
 }
+.section-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;;
+  position: relative;
 
+}
 .section-number {
    font-size: 120px;
   font-weight: bold;
@@ -21,7 +25,7 @@
   z-index: 0;
   position: relative;
   top: 80px;
-  
+
 }
 
 .section-content {
@@ -40,7 +44,10 @@
   font-size: 18px;
   line-height: 1.6;
 }
-
+.section-image-container{
+  width: 300px;
+  height: auto;
+}
 .section-item img {
   width: 300px;
   height: auto;
@@ -48,22 +55,64 @@
   z-index: 1;
   position: relative;
 }
+.gradient-overlay {
+  position: absolute;
+  width: 300px;
+  height: 500px;
+  background-image: linear-gradient(#00000096, #00000046);
+  z-index: 5;
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+}
+.gradient-overlay:hover{
+  backdrop-filter: blur(0px);
 
+}
 
+button {
+  font-size: 14px;
+  padding: 20px 60px;
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 20%;
+  font-family: 'booniItalic';
+}
+
+.section-item button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.section-item:hover .gradient-overlay {
+  backdrop-filter: blur(0px);
+}
 @media (max-width: 768px) {
-  .section-item {
+  .section-container {
       flex-direction: column;
       text-align: center;
   }
+  .section-item{
+    display: flex;
+    flex-direction: column;
+      text-align: center;
+      gap: 40px;
+  }
 
   .section-item img {
-      margin-top: 20px;
+      margin-top: 40px;
   }
 
   .section-number {
       font-size: 80px;
-      top: 0;
+      top: 50px;
       left: 50%;
       transform: translateX(-50%);
+  }
+  button{
+    width: 100%;
+
   }
 }

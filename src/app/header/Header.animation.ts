@@ -14,14 +14,13 @@ export function headerTyping(word: string[]): void {
   const typedElement = document.querySelector('.auto-type');
 
   if (typedElement) {
-    // Add the .typing-active class to trigger the CSS transition
+
     typedElement.classList.add('typing-active');
 
     const options = {
       strings: word,
       typeSpeed: 90,
       backSpeed: 90,
-      loop: true,
       showCursor: false,
     };
 

@@ -19,6 +19,17 @@ export class HomeCardsComponent implements OnInit{
     console.log(this.Cards);
   }
 
+  onDownloadCv(){
+    window.location.href = ' https://drive.google.com/file/d/1jvLQp0OY_vNYY6lVhALFltBNhuJ2NrN6/view?usp=drive_link';
+  }
+  navigationLink(url:string){
+    if (url) {
+      window.open(url, '_blank');
+    }
+
+  }
+
+
 }
 
 

@@ -5,7 +5,6 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { ShowCasesComponent } from './show-cases/show-cases.component';
 import { LoginFormComponent } from './login-form/login-form.component';
-import { DashBoardComponent } from './dash-board/dash-board.component';
 import { AuthService } from './services/authService/auth.service';
 import { authGuard } from './guards/auth.guard';
 import { HomeDashboardComponent } from './dash-board/home-dashboard/home-dashboard.component';
@@ -19,7 +18,6 @@ const routes: Routes = [
   {path:'login',component:LoginFormComponent},
   {path:'contact',component:ContactComponent},
   {path:'showcases',component:ShowCasesComponent},
-  {path:'dashboard',component:DashBoardComponent,canActivate:[authGuard]},
   {path:'homeDashboard',component:HomeDashboardComponent,canActivate:[authGuard]},
   {path:'aboutDashboard',component:AboutDashboardComponent,canActivate:[authGuard]},
   {path:'contactDashboard',component:ContactDashboardComponent,canActivate:[authGuard]},

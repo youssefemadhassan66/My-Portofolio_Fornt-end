@@ -1,14 +1,14 @@
 <div class="home-cards-section d-flex flex-column gap-5" data-aos-duration="1500" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
   <h1 class="text-center" style="font-size: 70px;">{{AboutCardHeader}}</h1>
   <div class="row w-100 home-card-container gap-3">
-    <div class="Home-card col-sm-12  col-lg-12 col-xl-4  " *ngFor="let card of Cards">
+    <div class="Home-card col-sm-12  col-lg-12 col-xl-3  " *ngFor="let card of Cards">
       <div class="card-content">
         <h1>{{card.ProjectTitle}}</h1>
         <p>{{card.ProjectDescription}}</p>
       </div>
       <div class="card-button d-flex gap-5">
-        <button (click)="navigationLink(card.ProjectGithubLink)">Visit Website</button>
-        <button (click)="navigationLink(card.ProjectHyperLink)">GitHub</button>
+        <button (click)="navigationLink(card.ProjectGithubLink)"> GitHub</button>
+        <button *ngIf="card.ProjectHyperLink" (click)="navigationLink(card.ProjectHyperLink)">Visit Website</button>
       </div>
     </div>
   </div>

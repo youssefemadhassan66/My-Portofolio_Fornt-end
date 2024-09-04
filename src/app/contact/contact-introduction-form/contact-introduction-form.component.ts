@@ -16,10 +16,10 @@ export class ContactIntroductionFormComponent {
   constructor(private MailData:HomeDataService){}
   ngOnInit(){
     this.MailMeForm = new FormGroup({
-      MailName:new FormControl(''),
-      MailSubject:new FormControl(''),
-      MailEmail : new FormControl('',),
-      MailDescription : new FormControl(''),
+      name:new FormControl(''),
+      subject:new FormControl(''),
+      email : new FormControl('',),
+      message : new FormControl(''),
     });
 
     this.Header = this.ContactIntroductionFormParent.Contents[0].data.header
@@ -27,9 +27,27 @@ export class ContactIntroductionFormComponent {
     this.Image = this.ContactIntroductionFormParent.Contents[0].data.image;
   }
 
-  onSFormSubmit(){
+  onSFormSubmit() {
+    const mailFormData = {
+      name: this.MailMeForm.get('name')?.value,
+      subject: this.MailMeForm.get('subject')?.value,
+      email: this.MailMeForm.get('email')?.value,
+      message: this.MailMeForm.get('message')?.value
+    };
 
+    console.log(mailFormData);
+
+    this.MailData.submitMessage(mailFormData).subscribe(
+      response => {
+        console.log('Form submitted successfully', response);
+      },
+      error => {
+        console.error('There was an error!', error);
+      }
+    );
   }
+
+
 
 
 }

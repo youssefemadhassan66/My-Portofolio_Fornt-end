@@ -25,4 +25,10 @@ export class HomeDataService {
     const POSTpageUrl = `http://localhost:3000/dashboard/${this.pageParam}`;
     return this.http.post(POSTpageUrl, formData);
   }
+
+  submitMessage(formData: any): Observable<any>{
+    const POSTpageUrl = `http://localhost:3000/${this.pageParam}`;
+    return this.http.post(POSTpageUrl, formData);
+  }
+
 }

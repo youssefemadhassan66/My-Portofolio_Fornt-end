@@ -4,21 +4,23 @@
 </div>
 
 <div class="home-container">
-  <div *ngIf="HomeServicesSection">
-    <app-home-service [HomeServicesFromParent]="HomeServicesSection"></app-home-service>
-  </div>
-  <div *ngIf="HomeAboutSection">
-    <app-home-about [HomeAboutFromParent]="HomeAboutSection"></app-home-about>
-  </div>
-  <div *ngIf="HomeCardSection">
-    <app-home-cards [HomeCardsFromParent]="HomeCardSection"></app-home-cards>
-  </div>
-  <div *ngIf="HomeBriefSection">
-    <app-brief [HomeBriefFromParent]="HomeBriefSection"></app-brief>
-  </div>
-  <div *ngIf="HomeBlogSection">
-    <app-blog-post [HomeBlogsFromParent]="HomeBlogSection"></app-blog-post>
-  </div>
-  
+    <div *ngIf="HomeAboutSection">
+      <app-home-about [HomeAboutFromParent]="HomeAboutSection"></app-home-about>
+    </div>
+    
+    <div *ngIf="HomeServicesSection">
+      <app-home-service [HomeServicesFromParent]="HomeServicesSection"></app-home-service>
+    </div>
+
+    <div *ngIf="HomeCardSection">
+      <app-home-cards [HomeCardsFromParent]="HomeCardSection"></app-home-cards>
+    </div>
+    <div *ngIf="HomeBriefSection">
+      <app-brief [HomeBriefFromParent]="HomeBriefSection"></app-brief>
+    </div>
+    <div *ngIf="HomeBlogSection">
+      <app-blog-post [HomeBlogsFromParent]="HomeBlogSection"></app-blog-post>
+    </div>
+
 </div>
 <app-footer></app-footer>

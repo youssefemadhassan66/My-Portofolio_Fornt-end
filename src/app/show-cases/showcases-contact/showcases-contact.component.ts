@@ -1,5 +1,5 @@
 import { Component,Input,OnInit} from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-showcases-contact',
   templateUrl: './showcases-contact.component.html',
@@ -7,6 +7,7 @@ import { Component,Input,OnInit} from '@angular/core';
 })
 export class ShowcasesContactComponent implements OnInit{
   @Input() showCasesContactFromParent:any;
+  constructor(private router:Router){}
   header:string='';
   description:string='';
   link:any;
@@ -15,6 +16,10 @@ export class ShowcasesContactComponent implements OnInit{
     this.description = this.showCasesContactFromParent.Contents[0].data.description;
     this.link = this.showCasesContactFromParent.Contents[0].data.link;
 
+  }
+
+  OnNavigate(){
+    this.router.navigate(['/contact']);
   }
 
 

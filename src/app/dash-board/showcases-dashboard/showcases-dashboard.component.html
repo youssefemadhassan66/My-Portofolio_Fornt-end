@@ -41,7 +41,8 @@
         <label for=""> ShowCases Sections</label>
         <div *ngFor="let Section of getSections.controls; let i = index" [formGroupName]="i">
           <label for="">Section {{i + 1}}</label>
-          <input type="text" placeholder="Blog Title" formControlName="sectionTitle">
+          <input type="text" placeholder="Section Title" formControlName="sectionTitle">
+          <input type="text" placeholder="Section link" formControlName="sectionLink">
           <textarea  formControlName="sectionDescription" placeholder="section Description" id="sectionImage"></textarea>
           <input id="sectionImage_{{i}}" type="file" (change)="onFileChange($event, 'sectionImage', i)">
         </div>

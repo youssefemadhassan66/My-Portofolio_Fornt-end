@@ -1,6 +1,6 @@
 <div class="row Contact-introduction">
   <div class="col-sm-12 col-lg-6">
-    <div class="Contact-introduction-content">
+    <div class="Contact-introduction-content" data-aos="fade-left" data-aos-duration="1500">
         <h1>{{Header}}</h1>
         <h3>Send me an email</h3>
     </div>
@@ -10,18 +10,18 @@
       <form (ngSubmit)="onSFormSubmit()" [formGroup]="MailMeForm">
 
         <!-- Mail Form -->
-        <div class="form-group">
+        <div class="form-group" data-aos="fade-right" data-aos-duration="1500">
           <label for="text">Full name</label>
-          <input type="text" placeholder="Mail Name" formControlName="MailName" name="MailName" class="form-control">
+          <input type="text" placeholder="Mail Name" formControlName="name" name="name" class="form-control">
 
           <label for="text">Subject</label>
-          <input type="text" placeholder="Mail Subject" formControlName="MailSubject" name="MailSubject" class="form-control">
+          <input type="text" placeholder="Mail Subject" formControlName="subject" name="subject" class="form-control">
 
           <label for="">Email-address</label>
-          <input type="text" placeholder="Mail Email" formControlName="MailEmail" name="MailEmail" class="form-control">
+          <input type="text" placeholder="Mail Email" formControlName="email" name="email" class="form-control">
 
           <label for="">Message description</label>
-          <textarea name="MailDescription" id="MailDescription" formControlName="MailDescription" placeholder="Write Description here" class="form-control"></textarea>
+          <textarea name="message" id="MailDescription" formControlName="message" placeholder="Write Description here" class="form-control"></textarea>
 
           <div class="form-group text-center">
             <button type="submit" class="btn btn-primary">Submit Form</button>

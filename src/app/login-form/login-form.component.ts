@@ -41,7 +41,7 @@ export class LoginFormComponent {
     this.auth.login(username,password).subscribe({
       next: (response) => {
         console.log('Login successful', response);
-        this.router.navigate(['/dashboard']); // Example navigation
+        this.router.navigate(['/homeDashboard']); // Example navigation
       },
       error: (error) => {
         console.error('Login failed', error);

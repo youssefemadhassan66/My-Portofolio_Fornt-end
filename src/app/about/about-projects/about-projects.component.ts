@@ -13,18 +13,13 @@ export class AboutProjectsComponent implements OnInit{
   AboutCardHeader:string='';
   Cards:any[]=[];
   ngOnInit(): void {
-    this.AboutCardHeader = this.AboutProjectsFromParent.Contents[0].data.header
+    this.AboutCardHeader = this.AboutCardHeader ? this.AboutProjectsFromParent.Contents[0].data.header : 'Projects'
     this.Cards = this.AboutProjectsFromParent.Contents[1].data.cards
 
-
   }
 
-  onGitLink(){
 
-  }
-  onDownloadCv(){
-    window.location.href = ' https://drive.google.com/file/d/1jvLQp0OY_vNYY6lVhALFltBNhuJ2NrN6/view?usp=drive_link';
-  }
+
   navigationLink(url:string){
     if (url) {
       window.open(url, '_blank');

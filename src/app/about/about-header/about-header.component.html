@@ -1,14 +1,15 @@
-<div class="header-section" >
-  <video id="background-video" autoplay loop muted >
-    <source [src]="video" type="video/mp4">
-  </video>
+<div class="header-section" [ngStyle]="{'background-image': 'url(' + video + ')'}"  data-aos="fade-down" data-aos-duration="1000">
   <app-navbar></app-navbar>
-  <div class="header-content">
-    <h1 >{{header}}</h1>
-  </div>
-  <div class="header-buttons">
-    <button class="btn-outline">Hire Me</button>
-    <button class="btn-play">My service</button>
+  <div class="HeaderContentContainer">
+    <div class="header-content">
+      <h1>{{header}}</h1>
+    </div>
   </div>
 </div>
 
+
+
+  <!-- <div class="header-buttons">
+      <button data-aos="fade-right" class="btn-outline">About me</button>
+      <button data-aos="fade-left" class="btn-play">Contact me</button>
+    </div> -->

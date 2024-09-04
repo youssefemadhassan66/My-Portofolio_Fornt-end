@@ -1,7 +1,6 @@
 import { Component,OnInit } from '@angular/core';
 import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 import { HomeDataService } from '../../services/home-data.service';
-import { response } from 'express';
 @Component({
   selector: 'app-home-dashboard',
   templateUrl: './home-dashboard.component.html',
@@ -27,6 +26,7 @@ export class HomeDashboardComponent implements OnInit{
         new FormGroup({
           cardTitle : new FormControl(null),
           cardDescription : new FormControl(null),
+          cardLink: new FormControl(null)
         })]),
       homeBriefTitle:new FormControl(null),
       homeBriefImage:new FormControl(null),
@@ -50,6 +50,7 @@ export class HomeDashboardComponent implements OnInit{
     control.push(new FormGroup({
       cardTitle : new FormControl(null),
       cardDescription : new FormControl(null),
+      cardLink: new FormControl(null)
       }));
   }
 
