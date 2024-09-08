@@ -4,6 +4,7 @@
   border-color: #ebdda37c;
   border-style: solid;
   height: 80%;
+  margin: 10px 0px;
 
 }
 .footer-disc-containr .row{
@@ -18,7 +19,7 @@ ul{
   list-style: none;
   display: flex;
   gap: 40px;
-  justify-content: end;
+  justify-content: center;
 }
 a{
   text-decoration: none;
@@ -37,6 +38,7 @@ a{
 .footer-disc{
   display: flex;
   gap: 30px;
+  justify-content: center;
 }
 #icon{
 font-size: 22px;
@@ -45,4 +47,10 @@ transition: all 0.3s ease-in-out;
 #icon:hover{
   color: #2484c6;
   transform: scale(1.2);
+}
+
+@media (max-width: 1500px) {
+  .header-content h1 {
+    font-size: 5.5rem;
+  }
 }

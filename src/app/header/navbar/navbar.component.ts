@@ -13,7 +13,7 @@ export class NavbarComponent implements OnInit{
     AOS.init();
 
   }
-  brand_logo = '/assets/icons/logo.svg';
+  brand_logo = '/assets/icons/youussef logo.jpg';
   navLinks = [
     {path:"/home",label:"Home"},
     {path:"/about",label:"About"},

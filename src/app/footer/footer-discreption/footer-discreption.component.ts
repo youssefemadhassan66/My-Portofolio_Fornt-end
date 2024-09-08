@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './footer-discreption.component.css'
 })
 export class FooterDiscreptionComponent {
-  brand_logo = '/assets/icons/logo.svg';
+  brand_logo = '/assets/icons/youussef logo.jpg';
   email = 'Youssefemadhassan@64gamil.com';
   number = '01501598998';
   links = [{
