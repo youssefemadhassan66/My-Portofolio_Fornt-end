@@ -19,8 +19,6 @@ export class ContactComponent implements OnInit{
     this.ContactData.getData().subscribe(data=>{
       this.ContactSectionsData = data;
       this.findContactSections();
-      console.log(this.ContactSectionsData);
-      console.log(this.ContactHeaderSection);
     });
 
   }

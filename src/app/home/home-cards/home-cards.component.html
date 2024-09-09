@@ -1,7 +1,7 @@
 <div class="home-cards-section d-flex flex-column gap-5"  data-aos="fade-up" data-aos-duration="2000" data-aos-anchor-placement="center-bottom">
   <h1 style="text-align: center; font-size: 70px; font-family: 'billie';">{{HomeCardHeader}}</h1>
   <div class="row w-100 home-card-container gap-3 ">
-    <div class="Home-card col-sm-12  col-lg-12 col-xl-3 " *ngFor="let card of Cards">
+    <div class="Home-card col-sm-12 col-lg-12 col-xl-12 col-xxl-3" *ngFor="let card of Cards">
       <div class="card-content">
         <h1>{{card.cardTitle}}</h1>
         <p>{{card.cardDescription}}</p>
@@ -11,3 +11,4 @@
     </div>
   </div>
 </div>
+<!-- col-sm-12 col-lg-12 col-xl-12 col-xxl-3   -->

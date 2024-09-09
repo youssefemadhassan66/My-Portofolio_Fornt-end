@@ -16,7 +16,7 @@ export class HomeHeaderComponent implements OnInit {
   video: any;
 
 
-  constructor() { }
+  constructor(private router:Router) {}
   ngOnInit(): void {
        AOS.init();
       this.header = this.HomeHeaderFromParent.Contents[0].data?.header || '';
@@ -26,6 +26,13 @@ export class HomeHeaderComponent implements OnInit {
       const newArray:any = [];
       wordsArray.forEach(word => {newArray.push(word);});
       headerTyping(newArray);
+  }
+
+  onNavigateAbout(){
+    this.router.navigate(['/about']);
+  }
+  onNavigateServices(){
+    this.router.navigate(['/contact'])
   }
 
 }

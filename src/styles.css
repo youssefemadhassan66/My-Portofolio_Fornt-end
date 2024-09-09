@@ -3,8 +3,8 @@
 
 /* For Firefox */
 body {
-  overflow-x: hidden; /* Hides the horizontal scrollbar */
-  overflow-y: auto;   /* Keeps the vertical scrollbar visible */
+  overflow-x: hidden !important; /* Hides the horizontal scrollbar */
+  overflow-y: auto !important;   /* Keeps the vertical scrollbar visible */
   background-color: rgb(0, 0, 0) !important;
 }
 

@@ -27,7 +27,6 @@ export class HomeComponent implements OnInit{
     this.HomeData.getData().subscribe(data=>{
       this.HomeSectionsData = data;
       this.findHomeSections();
-      console.log(this.HomeSectionsData);
     });
 
     this.HomeData.setPageParam('home');

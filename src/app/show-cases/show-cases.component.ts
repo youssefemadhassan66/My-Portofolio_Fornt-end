@@ -19,10 +19,7 @@ export class ShowCasesComponent implements OnInit{
     this.ShowCasesData.getData().subscribe(data=>{
       this.ShowcasesSectionsData = data;
       this.findHomeSections();
-      console.log(this.ShowcasesSectionsData);
     });
-
-    this.ShowCasesData.setPageParam('home');
   }
 
   findHomeSections() {

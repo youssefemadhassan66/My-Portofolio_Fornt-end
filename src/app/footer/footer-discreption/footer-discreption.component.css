@@ -54,3 +54,12 @@ transition: all 0.3s ease-in-out;
     font-size: 5.5rem;
   }
 }
+
+@media (max-width: 991px) {
+  .footer-disc-containr{
+
+  height: 90%;
+  margin: 20px 0px;
+  }
+
+}

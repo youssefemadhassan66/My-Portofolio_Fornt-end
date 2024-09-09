@@ -47,3 +47,18 @@
   position: relative;
   z-index: 1;
 }
+@media(max-width: 1200px){
+  #Colored-header{
+    font-size: 15px;
+  }
+ .Showcases-Introduction-container{
+   gap: 150px;
+ }
+ .Showcases-Introduction-content-container h1{
+  font-size: 30px;
+  width: 95%;
+ }
+ button{
+  width: 100%;
+ }
+}

@@ -11,10 +11,15 @@ a{
 
 body{
   font-family: 'booni' !important;
+  position: relative
+
 }
 h1,h2,h3,h4{
   font-family: 'booni';
 }
 p{
   font-family: 'Times New Roman', Times, serif;
+}
+html, body {
+  overflow-x: hidden !important;
 }

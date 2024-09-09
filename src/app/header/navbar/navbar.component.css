@@ -185,10 +185,15 @@ ul {
   }
 
 }
+@media (max-width: 991px) {
+  .mobile-navbar-brand img{
+    width: 120%;
+    z-index: 5;
+    display: flex;
+  }
 
 
-
-
+}
 
 /* Animations */
 
