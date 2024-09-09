@@ -9,7 +9,7 @@ import { FormControl } from '@angular/forms';
 })
 export class AuthService {
 
-LoginUrl = 'http://localhost:3000/login';
+LoginUrl = 'https://web-production-3fac9.up.railway.app/login';
 
 private isLocalStorageAvailable = typeof localStorage !=='undefined';
 constructor(private http:HttpClient,private router:Router) {
