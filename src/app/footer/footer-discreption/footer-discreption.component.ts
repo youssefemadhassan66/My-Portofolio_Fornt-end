@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
 })
 export class FooterDiscreptionComponent {
   brand_logo = '/assets/icons/youussef logo.jpg';
-  email = 'Youssefemadhassan@64gamil.com';
-  number = '01501598998';
+  email = 'Youssefemadhassan@66gmail.com';
+  number = '01063623735';
   links = [{
     link:'https://github.com/youssefemadhassan66',
     icon: 'fa-brands fa-lg fa-github'

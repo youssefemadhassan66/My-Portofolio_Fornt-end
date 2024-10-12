@@ -23,4 +23,5 @@ export class AboutGoalsComponent implements OnInit{
     window.location.href = this.link;
   }
   // https://drive.google.com/file/d/1jvLQp0OY_vNYY6lVhALFltBNhuJ2NrN6/view?usp=drive_link
+ 
 }
