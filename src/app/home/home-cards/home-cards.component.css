@@ -71,16 +71,14 @@ button a:hover{
   min-width: 520px;
 }
 .card-content h1{
-  font-size: 20px;
+  font-size: 22px;
   margin-bottom: 5px;
   text-align: center;
 }
 .card-content p{
-  font-size: 10px;
+  font-size: 12px;
 }
-button{
-  text-align: center;
-}
+
 
 }
 @media (max-width: 991px) {
@@ -88,20 +86,16 @@ button{
     min-width: none;
   width: 500px !important;
 }
-.Home-card{
-  min-width: 520px;
-}
+
 .card-content h1{
-  font-size: 20px;
+  font-size: 22px;
   margin-bottom: 5px;
   text-align: center;
 }
 .card-content p{
-  font-size: 10px;
+  font-size: 12px;
 }
-button{
-  text-align: center;
-}
+
 
 
 }
