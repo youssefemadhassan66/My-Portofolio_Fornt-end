@@ -70,11 +70,39 @@ button a:hover{
   .Home-card{
   min-width: 520px;
 }
+.card-content h1{
+  font-size: 20px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+.card-content p{
+  font-size: 10px;
+}
+button{
+  text-align: center;
+}
+
 }
 @media (max-width: 991px) {
-  .Home-card{
+.Home-card{
     min-width: none;
   width: 500px !important;
 }
+.Home-card{
+  min-width: 520px;
+}
+.card-content h1{
+  font-size: 20px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+.card-content p{
+  font-size: 10px;
+}
+button{
+  text-align: center;
+}
+
+
 }
 
