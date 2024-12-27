@@ -71,12 +71,12 @@ button a:hover{
   min-width: 520px;
 }
 .card-content h1{
-  font-size: 22px;
-  margin-bottom: 5px;
-  text-align: center;
+  font-size:3rem;
+  margin-bottom: ;
+
 }
 .card-content p{
-  font-size: 12px;
+  font-size: 18px;
 }
 
 
