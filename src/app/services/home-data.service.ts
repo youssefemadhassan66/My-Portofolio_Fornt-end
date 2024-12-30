@@ -13,7 +13,6 @@ export class HomeDataService {
 
   setPageParam(Page: string): void {
     this.pageParam = Page;
-    console.log(this.pageParam);
   }
 
   getData(): Observable<any> {

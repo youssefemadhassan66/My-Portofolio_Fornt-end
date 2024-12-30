@@ -16,7 +16,6 @@ export class HomeCardsComponent implements OnInit{
   ngOnInit(): void {
     this.HomeCardHeader = this.HomeCardsFromParent.Contents[0].data.header
     this.Cards = this.HomeCardsFromParent.Contents[1].data.Card
-    console.log(this.Cards);
   }
 
   onDownloadCv(){

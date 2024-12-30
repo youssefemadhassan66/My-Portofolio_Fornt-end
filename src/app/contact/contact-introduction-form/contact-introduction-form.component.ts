@@ -39,7 +39,7 @@ export class ContactIntroductionFormComponent {
 
     this.MailData.submitMessage(mailFormData).subscribe(
       response => {
-        console.log('Form submitted successfully', response);
+        console.log('Form submitted successfully');
       },
       error => {
         console.error('There was an error!', error);
