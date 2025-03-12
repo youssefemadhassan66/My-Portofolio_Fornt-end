@@ -4,21 +4,21 @@
 </div>
 
 <div class="home-container">
-    <div *ngIf="HomeAboutSection">
+    <div>
       <app-home-about [HomeAboutFromParent]="HomeAboutSection"></app-home-about>
     </div>
-    
-    <div *ngIf="HomeServicesSection">
+
+    <div>
       <app-home-service [HomeServicesFromParent]="HomeServicesSection"></app-home-service>
     </div>
 
-    <div *ngIf="HomeCardSection">
+    <div >
       <app-home-cards [HomeCardsFromParent]="HomeCardSection"></app-home-cards>
     </div>
-    <div *ngIf="HomeBriefSection">
+    <div >
       <app-brief [HomeBriefFromParent]="HomeBriefSection"></app-brief>
     </div>
-    <div *ngIf="HomeBlogSection">
+    <div >
       <app-blog-post [HomeBlogsFromParent]="HomeBlogSection"></app-blog-post>
     </div>
 
