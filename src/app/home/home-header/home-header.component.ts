@@ -13,18 +13,17 @@ export class HomeHeaderComponent implements OnInit {
 
   @Input() HomeHeaderFromParent: any;
   header: string = '';
-  video: any;
+  video:string = '/assets/images/Mian.mp4';
 
 
   constructor(private router:Router) {}
   ngOnInit(): void {
        AOS.init();
       this.header = this.HomeHeaderFromParent.Contents[0].data?.header || '';
-      this.video = this.HomeHeaderFromParent.Contents[0].data?.homeHeaderImage?.video || '';
 
       const wordsArray = this.header.split(" ");
-      const newArray:any = [];
-      wordsArray.forEach(word => {newArray.push(word);});
+      const newArray:any = ["Drop me a message, and I'll get back to you as soon as possible.","hello"];
+
       headerTyping(newArray);
   }
 

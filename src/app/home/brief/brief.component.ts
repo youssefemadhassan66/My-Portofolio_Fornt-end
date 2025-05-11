@@ -13,8 +13,8 @@ export class BriefComponent implements OnInit{
   HomeBriefImage:any;
   constructor(private router:Router){};
   ngOnInit(): void {
-    this.HomeBriefHeader = this.HomeBriefFromParent.Contents[0].data.header;
-    this.HomeBriefImage = this.HomeBriefFromParent.Contents[0].data.homeBriefImage.image;
+    this.HomeBriefHeader = ' Drop me a message, and I will get back to you as soon as possible.';
+    this.HomeBriefImage = 'assets/images/home_berif.jpg';
   }
   onNavigate(){
     this.router.navigate(['/contact']);
