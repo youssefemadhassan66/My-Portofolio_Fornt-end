@@ -13,11 +13,8 @@ export class AboutprofessionalBackgroundComponent  implements OnInit{
 
  ngOnInit(): void {
 
-   this.description = this.AboutProfessionalBackgroundFromParent.Contents[0].data.description;
+   this.description = 'have completed several professional diplomas, including a Full Stack diploma and a Mean Stack diploma, focusing on designing and developing websites with different themes';
 
-   if(!this.description){
-    this.description = 'have completed several professional diplomas, including a Full Stack diploma and a Mean Stack diploma, focusing on designing and developing websites with different themes'
-   }
  }
 
 }

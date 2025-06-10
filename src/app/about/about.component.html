@@ -1,21 +1,21 @@
-<div *ngIf="AboutHeaderSection" data-aos="fade-right">
+<div data-aos="fade-right">
   <app-about-header [AboutHeaderDataFromParent]="AboutHeaderSection"></app-about-header>
 </div>
 <div class="home-container">
-  <div *ngIf="AboutIntroductionSection">
+  <div>
     <app-about-introduction [AboutIntroductionFromParent]="AboutIntroductionSection"></app-about-introduction>
   </div>
 
-  <div *ngIf="AboutProfessionalBackgroundSection">
+  <div>
     <app-aboutprofessional-background [AboutProfessionalBackgroundFromParent]="AboutProfessionalBackgroundSection"></app-aboutprofessional-background>
   </div>
 
 
-  <div *ngIf="AboutProjectsSection">
+  <div>
     <app-about-projects [AboutProjectsFromParent]="AboutProjectsSection"></app-about-projects>
   </div>
 
-  <div *ngIf="AboutGoalsSection">
+  <div>
     <app-about-goals [AboutGoalsFromParent]="AboutGoalsSection"></app-about-goals>
   </div>
 </div>

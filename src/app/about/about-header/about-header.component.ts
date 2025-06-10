@@ -11,8 +11,8 @@ export class AboutHeaderComponent implements OnInit {
   header:string='';
   video:any;
   ngOnInit(): void {
-    this.header = this.AboutHeaderDataFromParent.Contents[0]?.data?.header || '';
-    this.video = this.AboutHeaderDataFromParent.Contents[0]?.data?.AboutHeaderImage?.image || '';
+    this.header = 'Career  Journey';
+    this.video = './assets/images/4973342.jpg';
   }
 
 }

@@ -10,20 +10,33 @@ import Typed from 'typed.js';
     }
   }
   /// Typing
-  export function headerTyping(){
-    const options = {
-      strings: [
 
-      ],
-      typeSpeed: 120,
-      backSpeed: 120,
-      loop: true
-    };
+let typedInstance: Typed | null = null;
 
+export function headerTyping(wordsArray: string[]) {
+  const element = document.querySelector('.auto-type');
 
-    const typed = new Typed('.auto-type', options);
+  if (typedInstance) {
+    typedInstance.destroy();
+    typedInstance = null;
   }
 
+  if (element) {
+    const options = {
+      strings: wordsArray,
+      typeSpeed: 0,
+      backSpeed: 120,
+      loop: true,
+      smartBackspace: true,
+      showCursor: true
+    };
+
+    typedInstance = new Typed(element, options);
+    element.classList.add('typing-active');
+  } else {
+    console.warn("Typed element '.auto-type' not found");
+  }
+}
 
   import Swiper from 'swiper';
 
