@@ -22,9 +22,9 @@ export class ContactIntroductionFormComponent {
       message : new FormControl(''),
     });
 
-    this.Header = this.ContactIntroductionFormParent.Contents[0].data.header
-    this.Description = this.ContactIntroductionFormParent.Contents[0].data.description;
-    this.Image = this.ContactIntroductionFormParent.Contents[0].data.image;
+    this.Header = 'Reach Out'
+    this.Description = 'Send me an email';
+    this.Image = '3094102.jpg';
   }
 
   onSFormSubmit() {
@@ -35,7 +35,7 @@ export class ContactIntroductionFormComponent {
       message: this.MailMeForm.get('message')?.value
     };
 
-    console.log(mailFormData);
+
 
     this.MailData.submitMessage(mailFormData).subscribe(
       response => {

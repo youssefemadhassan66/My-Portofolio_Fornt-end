@@ -12,12 +12,9 @@ export class ShowcasesContactComponent implements OnInit{
   description:string='';
   link:any;
   ngOnInit(): void {
-    this.header = this.showCasesContactFromParent.Contents[0].data.header;
-    this.description = this.showCasesContactFromParent.Contents[0].data.description;
-    this.link = this.showCasesContactFromParent.Contents[0].data.link;
-
+    this.header = 'Get in Touch';
+    this.description = "Whether your'e looking to collaborate on a project, need a website for your business, or just want to chat about the latest in tech, I'd love to hear from you! Drop me a message, and I'll get back to you as soon as possible.";
   }
-
   OnNavigate(){
     this.router.navigate(['/contact']);
   }

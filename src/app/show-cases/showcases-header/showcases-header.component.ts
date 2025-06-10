@@ -11,8 +11,8 @@ export class ShowcasesHeaderComponent implements OnInit{
   header:string='';
   ngOnInit(): void {
 
-    this.header = this.ShowcasesHeaderFromParent.Contents[0].data.header;
-    this.video = this.ShowcasesHeaderFromParent.Contents[0].data.ShowCasesHeaderImage.image;
+    this.header = 'Full stack Developer';
+    this.video = './assets/images/Showcases_header.jpg';
 
   }
 

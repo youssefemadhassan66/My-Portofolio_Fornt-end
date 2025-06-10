@@ -14,10 +14,10 @@ export class ContactDirctlyComponent implements OnInit{
   Mail:string = '';
 
   ngOnInit(){
-    this.Header = this.ContactDirectFormParent.Contents[0].data.header
-    this.Description = this.ContactDirectFormParent.Contents[0].data.description;
-    this.Number = this.ContactDirectFormParent.Contents[0].data.Number;
-    this.Mail = this.ContactDirectFormParent.Contents[0].data.Mail;
+    this.Header = 'Contact me Directly';
+    this.Description =  'Reach me out any time';
+    this.Number = '01063623735';
+    this.Mail = 'youssefemadhassan66@gmail.com';
   }
 
 }

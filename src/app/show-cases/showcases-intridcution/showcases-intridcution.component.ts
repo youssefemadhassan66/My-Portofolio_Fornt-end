@@ -11,9 +11,9 @@ export class ShowcasesIntridcutionComponent implements OnInit{
   description:string='';
   image:any;
   ngOnInit(): void {
-    this.header = this.showCasesIntroductionFromParent.Contents[0].data.header;
-    this.description = this.showCasesIntroductionFromParent.Contents[0].data.description;
-    this.image = this.showCasesIntroductionFromParent.Contents[0].data.ShowCasesIntroductionImage.image
+    this.header = 'Working as a Developer';
+    this.description = "I am always eager to take on new challenges and contribute to innovative projects that make a difference. My goal is to continue evolving as a developer and data scientist, leveraging my skills to build solutions that not only meet today’s needs but also anticipate tomorrow’s opportunities";
+    this.image = ''
 
   }
 }

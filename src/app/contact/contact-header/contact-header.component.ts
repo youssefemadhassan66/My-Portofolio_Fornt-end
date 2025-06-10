@@ -11,9 +11,9 @@ export class ContactHeaderComponent implements OnInit{
   video: any;
   constructor() { }
   ngOnInit(): void {
-    
-    this.header = this.ContactHeaderSectionFromParent.Contents[0].data?.header || '';
-    this.video = this.ContactHeaderSectionFromParent.Contents[0].data?.contactHeaderImage?.image || '';
+
+    this.header =  'Reach Out';
+    this.video = 'assets/images/4141099.jpg';
 
   }
 }
