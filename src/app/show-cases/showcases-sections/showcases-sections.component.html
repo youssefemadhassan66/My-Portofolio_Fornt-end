@@ -5,6 +5,7 @@
       <div class="section-number">0{{i+1}}</div>
         <div class="section-content">
             <h2>{{section.sectionTitle}}</h2>
+
             <p>
               {{section.sectionDescription}}
             </p>
@@ -12,7 +13,7 @@
       </div>
       <div class="section-image-container" data-aos="fade-left" data-aos-duration="1500">
         <div class="gradient-overlay"></div>
-        <img [src]="section.sectionImage.image" alt="Card Image">
+        <img [src]="section.image" alt="Card Image">
       </div>
     </div>
     <div class="Section-button" data-aos="fade-up" data-aos-duration="1600">
